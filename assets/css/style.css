@@ -168,6 +168,11 @@
           inset 0px 1px 1px 1px rgb(132 152 197 / 50%);
   }
 
+
+.hide {
+        display: none;
+  }
+
 /* ---------------- Effects & Animation */
 
 /* ----- Neon glow */
