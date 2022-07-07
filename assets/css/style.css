@@ -1,0 +1,16 @@
+/* ---------------- Defaults and Variables */
+
+  * {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+  }
+  
+  body {
+    color: var(--dark);
+    font-family: Oxygen, sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5;
+    background-color: var(--dark-blue);
+  }
