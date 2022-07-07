@@ -8,7 +8,6 @@
     <meta name="description" content="Online trivia quiz">
     <meta name="keywords" content="trivia, quiz, pub quiz, online, free">
     <link rel="stylesheet" href="assets/css/style.css">
-
     <title>Quiz Time</title>
 </head>
 
@@ -36,7 +35,7 @@
         <div id="game-area" class="hide">
             <!-- Scores -->
             <div id="top-score-label">Top Score: <span id="top-score"></span></div>
-            <div id="score-label">Your Score: <span id="score">0</span></div>
+            <div id="score-label">Your Score: <span id="score" class="sparks">0</span></div>
             <!-- Question area -->
             <div id="question-area">
                 <div id="question">
@@ -45,10 +44,10 @@
                 </div>
                 <!-- Answers -->
                 <div id="answers-container">
-                    <button id="answer1">A.</button>
-                    <button id="answer2">B.</button>
-                    <button id="answer3">C.</button>
-                    <button id="answer4">D.</button>
+                    <button id="answer1" class="answer pink-glow" data-listener="false">A.</button>
+                    <button id="answer2" class="answer pink-glow" data-listener="false">B.</button>
+                    <button id="answer3" class="answer pink-glow" data-listener="false">C.</button>
+                    <button id="answer4" class="answer pink-glow" data-listener="false">D.</button>
                 </div>
             </div>
             <button id="next" class="hide">Next >>></button>
