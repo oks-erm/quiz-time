@@ -38,6 +38,12 @@
     animation: pulsate 1.5s infinite alternate;
   }
 
+  button {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+  }
+
 /* ---------------- Neon frame */
 
 #box-border-top-blue {
@@ -168,9 +174,50 @@
           inset 0px 1px 1px 1px rgb(132 152 197 / 50%);
   }
 
+/* ---------------- Game page */
+
+#game-area {
+    grid-area: 3/3/11/10;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(5, 20%);
+  }
+
+/* ---------------- Difficulty section*/
+
+#question-area,
+#difficulty {
+  grid-area: 1/1/1/6;
+  width: 80%;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+#difficulty {
+  grid-area: 4/4/11/11;
+  width: 100%;
+}
+
+#difficulty button {
+  text-align: center;
+  display: block;
+}
+
+.difficulty {
+    display: flex;
+    width: 49%;
+    background-color: rgba(203, 229, 247, 0.9);
+    padding: 0.8em 1.3em;
+  }
+
 
 .hide {
-        display: none;
+        display: none !important;
   }
 
 /* ---------------- Effects & Animation */
@@ -211,6 +258,18 @@
                 0 0 0px 0.2rem #c2e2f7, 
           inset 0 0 0.5rem 1px #c5d8ef, 
           inset 0 0 1px 0.15rem #f0f4f6;
+  }
+
+  .blue-glow {
+    border: 0.15rem solid #bae3fe;
+    border-radius: 1.8rem;
+    box-shadow: 0 0 0.2rem 2px #51c6fe, 
+                0 0 1rem #84b5e3, 
+                0 0 1em #4e1055, 
+                0 0 2rem 2px #6ecaee, 
+                0 0 0px 0.2rem #3eb1fe, 
+          inset 0 0 0.5rem 1px #50a2ff, 
+          inset 0 0 1px 0.15rem #57daff;
   }
   
   @keyframes pulsate {

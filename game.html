@@ -28,12 +28,12 @@
         <!-- Difficulty section -->
         <div id="difficulty">
             <h1>Choose difficulty</h1>
-            <button>Easy-peasy</button>
-            <button>Kinda alright</button>
-            <button>Super Expert</button>
+            <button class="difficulty blue-glow" id="easy" data-listener="false">Easy-peasy</button>
+            <button class="difficulty blue-glow" id="medium" data-listener="false">Kinda alright</button>
+            <button class="difficulty blue-glow" id="expert" data-listener="false">Super Expert</button>
         </div>
         <!-- Game section -->
-        <div id="game-area">
+        <div id="game-area" class="hide">
             <!-- Scores -->
             <div id="top-score-label">Top Score: <span id="top-score"></span></div>
             <div id="score-label">Your Score: <span id="score">0</span></div>
@@ -51,7 +51,7 @@
                     <button id="answer4">D.</button>
                 </div>
             </div>
-            <button id="next">Next >>></button>
+            <button id="next" class="hide">Next >>></button>
         </div>
     </section>
     <!-- Javascript -->
