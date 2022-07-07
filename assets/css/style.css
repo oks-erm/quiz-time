@@ -26,3 +26,210 @@
     line-height: 1.5;
     background-color: var(--dark-blue);
   }
+
+  h1 {
+    grid-area: 4/4/7/10;
+    align-self: center;
+    font-size: 4.5rem;
+    font-family: Nothing You Could Do, sans-serif;
+    color: rgba(247, 230, 247, 0.9);
+    font-weight: 400;
+    text-align: center;
+    animation: pulsate 1.5s infinite alternate;
+  }
+
+/* ---------------- Neon frame */
+
+#box-border-top-blue {
+    grid-area: 3/5/3/8;
+    height: 1px;
+    margin-left: 2em;
+  }
+  
+  #box-border-top-pink {
+    grid-area: 2/6/2/10;
+    height: 1px;
+    margin-right: 1em;
+  }
+  
+  #box-border-right-blue {
+    grid-area: 6/10/11/10;
+    width: 1px;
+    margin-bottom: 3em;
+    justify-self: end;
+  }
+  
+  #box-border-right-pink {
+    grid-area: 5/11/9/11;
+    width: 1px;
+    justify-self: end;
+    margin-top: -3em;
+  }
+  
+  #box-border-bottom-blue {
+    grid-area: 11/5/11/10;
+    height: 1px;
+    margin-left: 6em;
+    margin-right: 4em;
+  }
+  
+  #box-border-bottom-pink {
+    grid-area: 12/5/12/7;
+    height: 1px;
+    align-self: end;
+    margin-right: -5em;
+    margin-left: -5em;
+  }
+  
+  #box-border-left-blue {
+    grid-area: 5/3/9/3;
+    width: 1px;
+    margin-top: 2em;
+  }
+  
+  #box-border-left-pink {
+    grid-area: 7/2/11/2;
+    width: 1px;
+    margin-top: -1em;
+    margin-bottom: 2em;
+  }
+  
+/* ---------------- Buttons */
+
+#sbmt {
+    padding: 0.8em;
+    width: 100%;
+    background-color: #f9e2fb;
+    border: 1px solid #c3c7cd;
+    border-radius: 15px;
+    color: var(--dark);
+    box-shadow: inset 2px -2px 6px 3px rgb(132 152 197 / 50%),
+                      3px 3px 6px 3px rgb(132 152 197 / 50%);
+    font-family: Oxygen, sans-serif;
+    font-size: 70%;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+/* ---------------- Game frame */
+
+#game-frame {
+    display: grid;
+    grid-template-rows: 1fr 20px 5px repeat(7, 11.5vh) 5px 20px 1fr;
+    grid-template-columns: 1fr 20px 5px repeat(6, 210px) 5px 20px 1fr;
+    height: 100vh;
+    background: url(../images/wallbg2.webp) no-repeat center center;
+    background-size: cover;
+  }
+  
+  #logo {
+    grid-area: 2/2/6/5;
+    background: url(../images/logo-big.png) no-repeat center center;
+    background-size: contain;
+    height: 180px;
+    width: 300px;
+    justify-self: center;
+    margin: -2em 0 0 -1.5em;
+    z-index: 2;
+  }
+  
+/* ---------------- Home page */
+
+#content-box {
+    grid-area: 6/4/9/11;
+    width: 400px;
+    height: 250px;
+    background-color: rgb(172 211 239 / 90%);
+    padding: 5%;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: -3em;
+  }
+  
+  form {
+    width: 100%;
+    color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -0.5em;
+  }
+  
+  input {
+    padding: 1em;
+    margin: 1em 0;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #f0f8ff;
+    box-shadow: 0px 0px 8px 3px rgb(132 152 197 / 50%),
+          inset 0px 1px 1px 1px rgb(132 152 197 / 50%);
+  }
+
+/* ---------------- Effects & Animation */
+
+/* ----- Neon glow */
+
+.border-glow-blue {
+    border: 0.05rem solid #bae3fe;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 4px #51c6fe, 
+                0 0 1rem 1px #84b5e3, 
+                0 0 1rem 0px #a6e7f6, 
+                0 0 2rem 2px #6ecaee, 
+                0 0 0px 0.25rem #3eb1fe, 
+          inset 0 0 0.5rem 1px #50a2ff, 
+          inset 0 0 1px 2rem #57daff;
+  }
+  
+  .border-glow-pink {
+    border: 0.05rem solid #fbbafe;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 5px #e872ef,
+                0 0 1rem 2px #b111bc,
+                0 0 1em #4e1055,
+                0 0 1rem 3px #ee6eee,
+                0 0 0px 0.2rem #f60bff,
+          inset 0 0 0.5rem 1px #f750ff,
+          inset 0 0 1px 0.15rem #f8b0fb;
+  }
+
+  .white-glow {
+    border: 0.15rem solid #d9f0f9;
+    border-radius: 1.8rem;
+    box-shadow: 0 0 0.2rem 2px #c5e1ef, 
+                0 0 1rem #c5d7e8, 
+                0 0 1em #b880be, 
+                0 0 2rem 2px #c8e2ec, 
+                0 0 0px 0.2rem #c2e2f7, 
+          inset 0 0 0.5rem 1px #c5d8ef, 
+          inset 0 0 1px 0.15rem #f0f4f6;
+  }
+  
+  @keyframes pulsate {
+    100% {
+      text-shadow:
+        0 0 4px rgba(248, 248, 248, .3),
+        0 0 11px rgba(248, 248, 248, .5),
+        0 0 19px rgba(248, 248, 248, .5),
+        0 0 40px #ff00ee,
+        0 0 80px #ff00ee,
+        0 0 90px #ff00ee,
+        0 0 100px #ff00ee,
+        0 0 150px #ff00ee;
+    }
+  
+    0% {
+      text-shadow:
+        0 0 2px rgba(248, 248, 248, .3),
+        0 0 4px rgba(248, 248, 248, .5),
+        0 0 6px rgba(248, 248, 248, .5),
+        0 0 10px #ff00ee,
+        0 0 45px #ff00ee,
+        0 0 55px #ff00ee,
+        0 0 70px #ff00ee,
+        0 0 80px #ff00ee;
+    }
+  }
