@@ -4,6 +4,14 @@
 
 /* ---------------- Defaults and Variables */
 
+:root {
+    --white: #f8f8f8;
+    --pink: #ff00fe;
+    --cyan: #45c0fd;
+    --dark: #63636b;
+    --dark-blue: #070707;
+  }
+
   * {
     margin: 0;
     padding: 0;
