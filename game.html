@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Online trivia quiz">
+    <meta name="keywords" content="trivia, quiz, pub quiz, online, free">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Quiz Time</title>
+</head>
+
+<body>
+
+    <section id="game-frame">
+         <!-- Game frame ang Logo -->
+        <div id="box-border-top-pink" class="border-glow-pink"></div>
+        <div id="box-border-top-blue" class="border-glow-blue"></div>
+        <div id="box-border-right-pink" class="border-glow-pink"></div>
+        <div id="box-border-right-blue" class="border-glow-blue"></div>
+        <div id="box-border-bottom-pink" class="border-glow-pink"></div>
+        <div id="box-border-bottom-blue" class="border-glow-blue"></div>
+        <div id="box-border-left-pink" class="border-glow-pink"></div>
+        <div id="box-border-left-blue" class="border-glow-blue"></div>
+        <a href="index.html" id="logo"></a>
+        <!-- Difficulty section -->
+        <div id="difficulty">
+            <h1>Choose difficulty</h1>
+            <button>Easy-peasy</button>
+            <button>Kinda alright</button>
+            <button>Super Expert</button>
+        </div>
+        <!-- Game section -->
+        <div id="game-area">
+            <!-- Scores -->
+            <div id="top-score-label">Top Score: <span id="top-score"></span></div>
+            <div id="score-label">Your Score: <span id="score">0</span></div>
+            <!-- Question area -->
+            <div id="question-area">
+                <div id="question">
+                    <p id="question-count"></p>
+                    <p id="question-text"></p>
+                </div>
+                <!-- Answers -->
+                <div id="answers-container">
+                    <button id="answer1">A.</button>
+                    <button id="answer2">B.</button>
+                    <button id="answer3">C.</button>
+                    <button id="answer4">D.</button>
+                </div>
+            </div>
+            <button id="next">Next >>></button>
+        </div>
+    </section>
+    <!-- Javascript -->
+    <script type="module" defer src="assets/js/game.js"></script>
+</body>
+
+</html>
