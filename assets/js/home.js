@@ -13,7 +13,7 @@ export function validateInput(input) {
     }
 }
 
-function formHandler(event) {
+export function formHandler(event) {
     //prevents default behavior
     event.preventDefault();
     // store input value in a variable

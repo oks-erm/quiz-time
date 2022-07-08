@@ -1,0 +1,29 @@
+{
+  "devDependencies": {
+    "happy-dom": "^2.55.0",
+    "jsdom": "^20.0.0",
+    "vitest": "^0.9.3"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "vitest --run --reporter verbose --environment happy-dom"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "jquery": "^3.6.0"
+  },
+  "name": "quiz_time",
+  "description": "![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)",
+  "version": "1.0.0",
+  "main": "home.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oks-erm/Quiz_Time.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oks-erm/Quiz_Time/issues"
+  },
+  "homepage": "https://github.com/oks-erm/Quiz_Time#readme"
+}
