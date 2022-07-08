@@ -20,6 +20,44 @@ document.write(htmlDocumentContent);
 
 import { formHandler, validateInput } from '../home.js';
 
+describe('validateInput()', () => {
+    beforeEach(() => {
+        document.body.innerHTML = '';
+        document.write(htmlDocumentContent);
+    })
+
+    it('should display an alert box if input field is empty', () => {
+        const testInput = '';
+
+        validateInput(testInput);
+        expect(global.alert).toBeCalled();
+    })
+
+    it('should display an alert box if spaces are provided as a value', () => {
+        const testInput = '     ';
+
+        validateInput(testInput);
+        expect(global.alert).toBeCalled();
+    });
+
+    it('should store the valid input value to a session storage', () => {
+        const testInput = 'Test';
+
+        validateInput(testInput);
+
+        expect(sessionStorage.getItem('userName')).toEqual(testInput);
+    })
+
+    it('should navigate to another page', () => {
+        const testInput = 'Test';
+
+        validateInput(testInput);
+
+        expect(global.location.assign).toBeCalled();
+        expect(global.location.assign).toBeCalledWith('game.html');
+    })
+})
+
 describe('formHandler()', () => {
     const form = document.querySelector('form');
     const event = new Event('submit');
