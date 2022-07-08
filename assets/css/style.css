@@ -117,24 +117,28 @@
     margin-bottom: 0;
   }
 
+  #next,
+  .error button {
+    font-family: Nothing You Could Do, sans-serif;
+    color: rgba(247, 230, 247, 0.9);
+    font-weight: 400;
+    text-align: center;
+    font-size: 150%;
+    margin: 0.6em;
+    background: none;
+    border: 0.15rem solid #fbbafe;
+    border-radius: 1.8rem;
+    padding: 0.2em 1em;
+    animation: pulsate 1.5s infinite alternate;
+  }
+  
   #next {
-  font-family: Nothing You Could Do, sans-serif;
-  color: rgba(247, 230, 247, 0.9);
-  font-weight: 400;
-  text-align: center;
-  font-size: 150%;
-  margin: 0.6em;
-  background: none;
-  border: 0.15rem solid #fbbafe;
-  border-radius: 1.8rem;
-  padding: 0.2em 1em;
-  animation: pulsate 1.5s infinite alternate;
-  grid-area: 1/2/1/5;
-  align-self: end;
-  justify-self: center;
-  margin-bottom: 1.6em;
-  z-index: 2;
-}
+    grid-area: 1/2/1/5;
+    align-self: end;
+    justify-self: center;
+    margin-bottom: 1.6em;
+    z-index: 2;
+  }
 
 /* ---------------- Game frame */
 
@@ -300,6 +304,9 @@
 .hide {
         display: none !important;
   }
+
+
+
 
 /* ---------------- Effects & Animation */
 
