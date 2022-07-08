@@ -1,6 +1,18 @@
 let input;
 const form = window.document.querySelector('form');
 
+export function validateInput(input) {
+    // Make sure there is input and it's not spaces only
+    if (!input || input.trim().length === 0) {
+        window.alert('Please, enter name to play!');
+    } else {
+        //Stores user name to access it later
+        sessionStorage.setItem('userName', input);
+        // Navigates to the game page
+        window.location.assign('game.html');
+    }
+}
+
 function formHandler(event) {
     //prevents default behavior
     event.preventDefault();
