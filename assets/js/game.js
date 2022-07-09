@@ -1,4 +1,4 @@
-import { buttonStylesChoiceCorrect, buttonStylesChoiceWrong } from './buttonStyles.js';
+import { buttonStylesChoiceCorrect, buttonStylesChoiceWrong, buttonsBeforeQuestion } from './buttonStyles.js';
 
 // API
 const easyLevel = 'https://opentdb.com/api.php?amount=20&difficulty=easy&type=multiple';
@@ -154,10 +154,10 @@ export function checkAnswer(e) {
     //display button "next" and add event listener
     next.classList.remove('hide');
 
-    // if (next.getAttribute('data-listener') !== 'true') {
-    //     next.addEventListener('click', nextQuestion);
-    //     next.setAttribute('data-listener', 'true');
-    // };
+    if (next.getAttribute('data-listener') !== 'true') {
+        next.addEventListener('click', nextQuestion);
+        next.setAttribute('data-listener', 'true');
+    };
 
     selectedAnswer = e.target;
     // check if a selected element has attribute data-index
@@ -168,4 +168,12 @@ export function checkAnswer(e) {
     } else {
         buttonStylesChoiceWrong(selectedAnswer, optionButtons);
     }
+}
+
+export function nextQuestion() {
+    // reset unanswered question styling
+    $('.answer').prop('disabled', false);
+    buttonsBeforeQuestion(optionButtons);
+    // get a new question
+    getQuestion();
 }
