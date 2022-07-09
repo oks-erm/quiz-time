@@ -8,6 +8,7 @@ let apiAddress;
 
 let data = {};
 let n = 0;
+let currentScore = 0;
 let userName = sessionStorage.getItem('userName');
 let difficulty;
 let currentQuestion;
@@ -133,6 +134,18 @@ export function setAnswers(answers) {
     }
 }
 
+// Increment score depending on difficulty
+export function incrementScore(difficulty) {
+    if (difficulty === 'easy') {
+        currentScore += 10;
+    } else if (difficulty === 'medium') {
+        currentScore += 20;
+    } else {
+        currentScore += 30
+    }
+    score.innerText = currentScore;
+}
+
 // Check answers
 export function checkAnswer(e) {
     // disable buttons after the answer is chosen
@@ -151,6 +164,7 @@ export function checkAnswer(e) {
     if (selectedAnswer.hasAttribute('data-index')) {
         // style buttons according to the answer
         buttonStylesChoiceCorrect(selectedAnswer, optionButtons);
+        incrementScore(difficulty);
     } else {
         buttonStylesChoiceWrong(selectedAnswer, optionButtons);
     }
