@@ -31,14 +31,26 @@
         <!-- Enter name form -->
         <h1>Ready for a quiz?</h1>
         <div id="content-box" class="white-glow">
-            <form data-listener ="false">
+            <form data-listener="false">
                 <label for="usrname">Enter name:</label>
                 <input type="text" id="usrname" name="username" maxlength="23">
                 <input id="sbmt" type="submit" value="Play">
             </form>
         </div>
+        <!-- Loader -->
+        <div class="loader-wrapper">
+            <div class="gooey">
+                <span class="dot"></span>
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="module" defer src="assets/js/home.js"></script>
 </body>
 
