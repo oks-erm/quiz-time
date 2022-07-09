@@ -1,4 +1,5 @@
 import { buttonStylesChoiceCorrect, buttonStylesChoiceWrong, buttonsBeforeQuestion } from './buttonStyles.js';
+import { openModal } from './modal.js';
 
 // API
 const easyLevel = 'https://opentdb.com/api.php?amount=20&difficulty=easy&type=multiple';
@@ -104,7 +105,7 @@ export function getQuestion() {
        next.classList.add('hide');
     } else {
         game.classList.add('hide');
-        // openModal();
+        openModal();
     }
 }
 
