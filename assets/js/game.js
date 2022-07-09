@@ -76,6 +76,15 @@ export async function callAPI(apiAddress) {
     }
 }
 
+// Shuffle answers
+export function shuffle(array) {
+    array.reverse().forEach((item, index) => {
+        const j = Math.floor(Math.random() * (index + 1));
+        [array[index], array[j]] = [array[j], array[index]];
+    });
+    return array;
+}
+
 // Output a question
 export function getQuestion() {
     currentQuestion = data.results[n];
@@ -86,7 +95,7 @@ export function getQuestion() {
         correctAnswer = currentQuestion.correct_answer;
         // create an array with answer options for the questions
         answers = [...currentQuestion.incorrect_answers, correctAnswer];
-        // shuffle(answers);
+        shuffle(answers);
         // get the index of the correct answer
         correctIndex = answers.indexOf(correctAnswer);
         // set the data-index on the element with the correct answer
