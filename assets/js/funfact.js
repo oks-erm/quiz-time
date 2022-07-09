@@ -37,7 +37,7 @@ export function setEventListeners() {
     };
   }
 
-// add event listener to a window to fade out loader when the page is loaded
+// add event listener to the window to fade out loader when the page is loaded
 $(window).on("load", function () {
     $(".loader-wrapper").fadeOut("slow");
     getData();

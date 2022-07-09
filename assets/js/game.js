@@ -25,8 +25,6 @@ const question = document.getElementById('question-text');
 const optionButtons = document.getElementsByClassName('answer');
 const next = document.getElementById('next');
 
-setDifficulty();
-
 // Add event listeners to difficulty buttons and change the attribute
 export function setDifficulty() {
     for (let button of document.getElementsByClassName('difficulty')) {
@@ -178,3 +176,9 @@ export function nextQuestion() {
     // get a new question
     getQuestion();
 }
+
+// add event listener to the window to fade out loader when the page is loaded
+$(window).on("load", function () {
+    $(".loader-wrapper").fadeOut("slow");
+    setDifficulty();
+})
