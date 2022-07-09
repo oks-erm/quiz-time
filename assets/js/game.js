@@ -1,6 +1,6 @@
 import { buttonStylesChoiceCorrect, buttonStylesChoiceWrong, buttonsBeforeQuestion } from './buttonStyles.js';
 import { openModal } from './modal.js';
-import { setScores, handleScores } from './scores.js';
+import { setScores, handleScores, scoresData } from './scores.js';
 
 // API
 const easyLevel = 'https://opentdb.com/api.php?amount=20&difficulty=easy&type=multiple';
@@ -28,6 +28,7 @@ const optionButtons = document.getElementsByClassName('answer');
 const next = document.getElementById('next');
 
 // Scores
+const yourScore = document.getElementById('your-score');
 const utc = new Date().toDateString().slice(4);
 const score = document.getElementById('score');
 
@@ -112,7 +113,8 @@ export function getQuestion() {
         handleScores(currentScore, userName, utc);
         // hide the game area, open the modal with highscores
         game.classList.add('hide');
-        openModal();
+        openModal(scoresData);
+        yourScore.innerText = `Well done, ${userName}! You've scored` + ' ' + currentScore + '.';
     }
 }
 

@@ -22,7 +22,7 @@ let scoresData = [ // backup scores data if api call fails
 ];
 
 // Open modal
-export function openModal() {
+export function openModal(scoresData) {
     // show modal
     modal.classList.add('show');
     buildTable(scoresData);
