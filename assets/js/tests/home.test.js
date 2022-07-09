@@ -18,6 +18,9 @@ global.location.assign = vi.fn();
 document.body.innerHTML = '';
 document.write(htmlDocumentContent);
 
+global.$ = require('jquery')(window);
+global.$ = require('jquery');
+
 import { formHandler, validateInput } from '../home.js';
 
 describe('validateInput()', () => {

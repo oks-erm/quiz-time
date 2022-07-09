@@ -21,14 +21,13 @@ export function formHandler(event) {
     validateInput(input);
 }
 
-
+// add event listener with change of attribute to enable testing it
+if (form.getAttribute('data-listener') !== "true") {
+    form.addEventListener('submit', formHandler);
+    form.setAttribute('data-listener', 'true');
+}
 
 // add event listener to the window to fade out loader when the page is loaded
 $(window).on("load", function () {
     $(".loader-wrapper").fadeOut("slow");
-    // add event listener with change of attribute to enable testing it
-    if (form.getAttribute('data-listener') !== "true") {
-        form.addEventListener('submit', formHandler);
-        form.setAttribute('data-listener', 'true');
-    }
 })
