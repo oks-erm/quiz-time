@@ -48,6 +48,28 @@ describe('writeData()', () => {
         writeData(fact);
         const parAfter = document.getElementById('funfact-text').innerHTML;
 
-        expect(parAfter).toBe("It's impossible to hum while holding your nose.")
+        expect(parAfter).toBe("It's impossible to hum while holding your nose.");
     })
-});
+})
+
+describe('setEventListeners()', () => {
+    global.location.assign = vi.fn();
+    setEventListeners();
+
+    const playAgain = document.getElementById('play-again');
+    const changeName = document.getElementById('change-name');
+    it('should set data-listener to true', () => {
+        expect(playAgain.getAttribute('data-listener')).toBe('true');
+        expect(changeName.getAttribute('data-listener')).toBe('true');
+    })
+
+    it('should navigate to another pages when buttons are clicked', () => {
+        const event = new Event('click');
+        playAgain.dispatchEvent(event);
+        changeName.dispatchEvent(event);
+
+        expect(global.location.assign).toBeCalled();
+        expect(global.location.assign).toBeCalledWith('game.html');
+        expect(global.location.assign).toBeCalledWith('index.html');
+    })
+})
