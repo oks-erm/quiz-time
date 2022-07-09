@@ -1,25 +1,9 @@
-import { sortScores } from "./scores.js";
+import { scoresData, sortScores } from "./scores.js";
+import { confettiBurst } from "./animation.js";
 
 const modal = document.getElementById('modal-wrapper');
 const playAgain = document.getElementById('play-again');
 const tbody = document.getElementsByTagName('tbody')[0];
-let scoresData = [ // backup scores data if api call fails
-    {
-        "Score": "50",
-        "Name": "Jake the dog",
-        "Date": "2022/06/07"
-    },
-    {
-        "Score": "60",
-        "Name": "The queen of everything",
-        "Date": "2022/06/07"
-    },
-    {
-        "Score": "100",
-        "Name": "God",
-        "Date": "00/00/00"
-    }
-];
 
 // Open modal
 export function openModal(scoresData) {
@@ -31,6 +15,8 @@ export function openModal(scoresData) {
         playAgain.addEventListener('click', (e) => window.location.assign('funfact.html'));
         playAgain.setAttribute('data-listener', 'true');
     };
+    // confetti animation
+    confettiBurst();
 }
 
 // Build highscores table from sorted array with top scores
