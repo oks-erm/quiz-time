@@ -311,7 +311,6 @@
   text-align: inherit;
 }
 
-
 /* ---------------- Classes for JS */
 
 .correct {
@@ -329,6 +328,51 @@
 
 .hide {
   display: none !important;
+}
+
+/* ---------------- Modal */
+
+#modal-wrapper.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 4;
+}
+
+#modal-content {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  width: 70vw;
+  max-width: 100%;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+/* ---------------- Highscores table */
+
+th,
+td {
+  border-bottom: 1px dotted rgb(255, 255, 255, 0.8);
+  padding: 0.2em 3em;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ---------------- Fun Fact page */
@@ -380,49 +424,105 @@
   margin-bottom: 0.1em;
 }
 
-/* ---------------- Modal */
+/* ----- Loader */
 
-#modal-wrapper.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-#modal-wrapper {
-  position: fixed;
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  pointer-events: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  z-index: 4;
-}
-
-#modal-content {
   background-color: var(--dark-blue);
-  color: var(--white);
-  width: 70vw;
-  max-width: 100%;
-  border-radius: 1em;
-  padding: 1em;
 }
 
-/* ---------------- Highscores table */
-
-th,
-td {
-  border-bottom: 1px dotted rgb(255, 255, 255, 0.8);
-  padding: 0.2em 3em;
+.gooey {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 142px;
+  height: 40px;
+  margin: -20px 0 0 -71px;
+  background: var(--dark-blue);
+  filter: contrast(20);
 }
 
-table {
-  margin-left: auto;
-  margin-right: auto;
+.gooey .dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  filter: blur(4px);
+  background: var(--pink);
+  border-radius: 50%;
+  transform: translateX(0);
+  animation: dot 2.8s infinite;
+}
+
+.gooey .dots {
+  transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  animation: dots 2.8s infinite;
+}
+
+.gooey .dots span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  filter: blur(4px);
+  background: var(--pink);
+  border-radius: 50%;
+}
+
+@-moz-keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+
+@-webkit-keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+
+@-o-keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+
+@keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+
+@-moz-keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
+}
+
+@-webkit-keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
+}
+
+@-o-keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
+}
+
+@keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
 }
 
 /* ---------------- Error Page */

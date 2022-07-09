@@ -3,9 +3,6 @@ const funfactText = document.getElementById('funfact-text');
 const playAgain = document.getElementById('play-again');
 const changeName = document.getElementById('change-name');
 
-getData();
-setEventListeners();
-
 // get a random fact from API
 async function getData() {
     const response = await $.ajax({
@@ -40,3 +37,9 @@ export function setEventListeners() {
     };
   }
 
+// add event listener to a window to fade out loader when the page is loaded
+$(window).on("load", function () {
+    $(".loader-wrapper").fadeOut("slow");
+    getData();
+    setEventListeners();
+  })
