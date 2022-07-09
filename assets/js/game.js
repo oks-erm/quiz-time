@@ -89,20 +89,36 @@ export function shuffle(array) {
 export function getQuestion() {
     currentQuestion = data.results[n];
     if(n <=19) {
-        //set the question and answers
-        question.innerHTML = currentQuestion.question;
+       // set the question and answers
+       question.innerHTML = currentQuestion.question;
+       prepareAnswers(currentQuestion);
+       setAnswers(answers);
+       // display a question count and increment it
+       questionCount.innerText = `${n+1}` + '/20';
+       n++;
+       // hide next button
+       next.classList.add('hide');
+    } else {
+        game.classList.add('hide');
+        // openModal();
+    }
+}
 
-        correctAnswer = currentQuestion.correct_answer;
-        // create an array with answer options for the questions
-        answers = [...currentQuestion.incorrect_answers, correctAnswer];
-        shuffle(answers);
-        // get the index of the correct answer
-        correctIndex = answers.indexOf(correctAnswer);
-        // set the data-index on the element with the correct answer
-        optionButtons[correctIndex].dataset.index = correctIndex;
+// Process answers
+export function prepareAnswers(currentQuestion) {
+    correctAnswer = currentQuestion.correct_answer;
+    // create an array with answer options for the questions
+    answers = [...currentQuestion.incorrect_answers, correctAnswer];
+    shuffle(answers);
+    // get the index of the correct answer
+    correctIndex = answers.indexOf(correctAnswer);
+    // set the data-index on the element with the correct answer
+    optionButtons[correctIndex].dataset.index = correctIndex;
+}
 
-        // Set answer options and add event listeners to option buttons
-        options = Array.from(optionButtons);
+// Set answer options and add event listeners to option buttons
+export function setAnswers(answers) {
+    options = Array.from(optionButtons);
     for (let i = 0; i < options.length; i++) {
         // display answer options on the buttons
         options[i].innerHTML += '  ' + `${answers[i]}`;
@@ -111,13 +127,5 @@ export function getQuestion() {
         //     options[i].addEventListener('click', checkAnswer);
         //     options[i].setAttribute('data-listener', 'true');
         // }
-    }
-        questionCount.innerText = `${n+1}` + '/20';
-        n++;
-        // hide next button
-        next.classList.add('hide');
-    } else {
-        game.classList.add('hide');
-        // openModal();
     }
 }
