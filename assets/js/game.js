@@ -1,3 +1,5 @@
+import { buttonStylesChoiceCorrect, buttonStylesChoiceWrong } from './buttonStyles.js';
+
 // API
 const easyLevel = 'https://opentdb.com/api.php?amount=20&difficulty=easy&type=multiple';
 const mediumLevel = 'https://opentdb.com/api.php?amount=20&difficulty=medium&type=multiple';
@@ -13,6 +15,7 @@ let correctIndex = null;
 let correctAnswer;
 let answers;
 let options;
+let selectedAnswer;
 
 const game = document.getElementById('game-area');
 const questionCount = document.getElementById('question-count');
@@ -123,9 +126,32 @@ export function setAnswers(answers) {
         // display answer options on the buttons
         options[i].innerHTML += '  ' + `${answers[i]}`;
         // add event listeners to answer buttons
-        // if (options[i].getAttribute('data-listener') !== 'true') {
-        //     options[i].addEventListener('click', checkAnswer);
-        //     options[i].setAttribute('data-listener', 'true');
-        // }
+        if (options[i].getAttribute('data-listener') !== 'true') {
+            options[i].addEventListener('click', checkAnswer);
+            options[i].setAttribute('data-listener', 'true');
+        }
+    }
+}
+
+// Check answers
+export function checkAnswer(e) {
+    // disable buttons after the answer is chosen
+    $('.answer').prop('disabled', true);
+
+    //display button "next" and add event listener
+    next.classList.remove('hide');
+
+    // if (next.getAttribute('data-listener') !== 'true') {
+    //     next.addEventListener('click', nextQuestion);
+    //     next.setAttribute('data-listener', 'true');
+    // };
+
+    selectedAnswer = e.target;
+    // check if a selected element has attribute data-index
+    if (selectedAnswer.hasAttribute('data-index')) {
+        // style buttons according to the answer
+        buttonStylesChoiceCorrect(selectedAnswer, optionButtons);
+    } else {
+        buttonStylesChoiceWrong(selectedAnswer, optionButtons);
     }
 }

@@ -301,9 +301,25 @@
   text-align: inherit;
 }
 
+
+/* ---------------- Classes for JS */
+
+.correct {
+  background-color: rgb(159, 235, 159);
+}
+
+.incorrect {
+  background-color: rgb(231 170 194);
+}
+
+.fade {
+  color: rgba(99, 99, 107, .4);
+  background-color: rgba (180, 180, 205, .5);
+}
+
 .hide {
-        display: none !important;
-  }
+  display: none !important;
+}
 
 /* ---------------- Error Page */
 
