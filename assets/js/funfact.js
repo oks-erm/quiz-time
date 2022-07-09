@@ -1,4 +1,5 @@
 let fact;
+const funfactText = document.getElementById('funfact-text');
 
 getData();
 
@@ -10,7 +11,17 @@ async function getData() {
       dataType: "json"
     });
     fact = response.text;
-    console.log(fact);
-    // writeData(fact);
+    writeData(fact);
   }
+
+// write response result to the text field or a backup text if the API call fails 
+export function writeData(fact) {
+    if (fact.length > 0) {
+      funfactText.innerHTML = fact;
+    } else {
+      funfactText.innerHTML = "It's impossible to hum while holding your nose.";
+    }
+  }
+
+
 
