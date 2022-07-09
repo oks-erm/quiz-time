@@ -2,6 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Oxygen:wght@300;400&display=swap');
 
+@font-face {
+  font-family: 'gods_own_junkyardregular';
+  src: url('fonts/godsownjunkyard-regular-webfont.woff2') format('woff2'),
+       url('fonts/godsownjunkyard-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* ---------------- Defaults and Variables */
 
 :root {
