@@ -9,6 +9,10 @@ let n = 0;
 let userName = sessionStorage.getItem('userName');
 let difficulty;
 let currentQuestion;
+let correctIndex = null;
+let correctAnswer;
+let answers;
+let options;
 
 const game = document.getElementById('game-area');
 const questionCount = document.getElementById('question-count');
@@ -63,7 +67,7 @@ export async function callAPI(apiAddress) {
     // assign response to variable when promise resolves
     if (response.status > 199 && response.status < 300) {
         data = await response.json();
-        // difficultyToGame();
+        difficultyToGame();
         console.log(data);
         return data;
     } else {
@@ -77,6 +81,34 @@ export function getQuestion() {
     currentQuestion = data.results[n];
     if(n <=19) {
         //set the question and answers
-        getQuestion.innerHTML = currentQuestion.question;
+        question.innerHTML = currentQuestion.question;
+
+        correctAnswer = currentQuestion.correct_answer;
+        // create an array with answer options for the questions
+        answers = [...currentQuestion.incorrect_answers, correctAnswer];
+        // shuffle(answers);
+        // get the index of the correct answer
+        correctIndex = answers.indexOf(correctAnswer);
+        // set the data-index on the element with the correct answer
+        optionButtons[correctIndex].dataset.index = correctIndex;
+
+        // Set answer options and add event listeners to option buttons
+        options = Array.from(optionButtons);
+    for (let i = 0; i < options.length; i++) {
+        // display answer options on the buttons
+        options[i].innerHTML += '  ' + `${answers[i]}`;
+        // add event listeners to answer buttons
+        // if (options[i].getAttribute('data-listener') !== 'true') {
+        //     options[i].addEventListener('click', checkAnswer);
+        //     options[i].setAttribute('data-listener', 'true');
+        // }
+    }
+        questionCount.innerText = `${n+1}` + '/20';
+        n++;
+        // hide next button
+        next.classList.add('hide');
+    } else {
+        game.classList.add('hide');
+        // openModal();
     }
 }
