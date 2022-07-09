@@ -42,6 +42,13 @@ export function setApiAddress(difficulty) {
     return apiAddress;
 }
 
+// Hide difficulty buttons, show the game area
+export function difficultyToGame() {
+    document.getElementById('difficulty').classList.add('hide');
+    Gamepad.classList.remove('hide');
+    getQuestion();
+}
+
 // Call API
 export async function callAPI(apiAddress) {
     const response = await fetch(apiAddress);
@@ -53,6 +60,6 @@ export async function callAPI(apiAddress) {
         return data;
     } else {
     // navigate to the error page if response is not successful 
-        // window.location.assign('500.html');
+        window.location.assign('500.html');
     }
 }
