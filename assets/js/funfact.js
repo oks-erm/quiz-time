@@ -1,7 +1,10 @@
 let fact;
 const funfactText = document.getElementById('funfact-text');
+const playAgain = document.getElementById('play-again');
+const changeName = document.getElementById('change-name');
 
 getData();
+setEventListeners();
 
 // get a random fact from API
 async function getData() {
@@ -23,5 +26,17 @@ export function writeData(fact) {
     }
   }
 
-
+// add event listeners to buttons with change of attribute for easier testing
+export function setEventListeners() {
+    if (changeName.getAttribute('data-listener') !== 'true') {
+      // navigate to the home page when clicked
+      changeName.addEventListener('click', () => window.location.assign('index.html'));
+      changeName.setAttribute('data-listener', 'true');
+    };
+    if (playAgain.getAttribute('data-listener') !== 'true') {
+      // navigate to the game page when clicked
+      playAgain.addEventListener('click', () => window.location.assign('game.html'));
+      playAgain.setAttribute('data-listener', 'true');
+    };
+  }
 
