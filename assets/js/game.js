@@ -5,8 +5,16 @@ const expertLevel = 'https://opentdb.com/api.php?amount=20&difficulty=hard&type=
 let apiAddress;
 
 let data = {};
+let n = 0;
 let userName = sessionStorage.getItem('userName');
 let difficulty;
+let currentQuestion;
+
+const game = document.getElementById('game-area');
+const questionCount = document.getElementById('question-count');
+const question = document.getElementById('question-text');
+const optionButtons = document.getElementsByClassName('answer');
+const next = document.getElementById('next');
 
 setDifficulty();
 
@@ -45,7 +53,7 @@ export function setApiAddress(difficulty) {
 // Hide difficulty buttons, show the game area
 export function difficultyToGame() {
     document.getElementById('difficulty').classList.add('hide');
-    Gamepad.classList.remove('hide');
+    game.classList.remove('hide');
     getQuestion();
 }
 
@@ -61,5 +69,14 @@ export async function callAPI(apiAddress) {
     } else {
     // navigate to the error page if response is not successful 
         window.location.assign('500.html');
+    }
+}
+
+// Output a question
+export function getQuestion() {
+    currentQuestion = data.results[n];
+    if(n <=19) {
+        //set the question and answers
+        getQuestion.innerHTML = currentQuestion.question;
     }
 }
