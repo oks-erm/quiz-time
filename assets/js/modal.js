@@ -1,3 +1,5 @@
+import { sortScores } from "./scores.js";
+
 const modal = document.getElementById('modal-wrapper');
 const playAgain = document.getElementById('play-again');
 const tbody = document.getElementsByTagName('tbody')[0];
@@ -33,7 +35,7 @@ export function openModal() {
 
 // Build highscores table from sorted array with top scores
 export function buildTable(array) {
-    // sortScores(array);
+    sortScores(array);
     let top = array.slice(0, 8);
     for (let object of top) {
         let row = document.createElement('tr')
