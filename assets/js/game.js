@@ -1,6 +1,6 @@
 import { buttonStylesChoiceCorrect, buttonStylesChoiceWrong, buttonsBeforeQuestion } from './buttonStyles.js';
 import { openModal } from './modal.js';
-import { callScores } from './scoresapi.js';
+import { setScores } from './scores.js';
 
 // API
 const easyLevel = 'https://opentdb.com/api.php?amount=20&difficulty=easy&type=multiple';
@@ -63,7 +63,7 @@ export function difficultyToGame() {
     document.getElementById('difficulty').classList.add('hide');
     game.classList.remove('hide');
     getQuestion();
-    console.log(callScores());
+    setScores();
 }
 
 // Call API
