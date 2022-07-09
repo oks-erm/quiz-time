@@ -118,6 +118,7 @@
   }
 
   #next,
+  #play-again,
   .error button {
     font-family: Nothing You Could Do, sans-serif;
     color: rgba(247, 230, 247, 0.9);
