@@ -119,6 +119,7 @@
 
   #next,
   #play-again,
+  #change-name,
   .error button {
     font-family: Nothing You Could Do, sans-serif;
     color: rgba(247, 230, 247, 0.9);
@@ -320,6 +321,55 @@
 
 .hide {
   display: none !important;
+}
+
+/* ---------------- Fun Fact page */
+
+#funfact {
+  background: url(../images/wallbg2.webp) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#fun-neon,
+#fact-neon {
+  font-family: Nothing You Could Do, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 5em;
+  text-transform: uppercase;
+}
+
+#fun-neon {
+  color: var(--white);
+  text-shadow: 0 0 10px #fff, 
+               0 0 40px #d9e5f2, 
+               0 0 60px #dbe6f2, 
+               0 0 70px #e2edf3;
+}
+
+#fact-neon {
+  color: #f999fe;
+  text-shadow: 0 0 10px #ff00ee, 
+               0 0 40px #ff00ee, 
+               0 0 60px #ff00ee, 
+               0 0 70px #ff00ee;
+}
+
+#funfact-container {
+  background-color: rgba(203, 229, 247, 0.9);
+  padding: 1em;
+  width: 60%;
+  margin: 0.5em 2em 0.5em 2em;
+}
+
+#funfact button {
+  margin-bottom: 0.1em;
 }
 
 /* ---------------- Modal */
