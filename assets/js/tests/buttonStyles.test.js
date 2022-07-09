@@ -106,3 +106,43 @@ describe('buttonStylesChoiceWrong()', () => {
         expect(optionButtons[1].classList.contains('blue-glow')).toBe(true);
     });
 });
+
+describe('buttonsBeforeQuestion()', () => {
+    document.body.innerHTML = '';
+    document.write(htmlDocumentContent);
+
+    const optionButtons = document.getElementsByClassName('answer');
+    optionButtons[1].dataset.index = '1';
+    let testSelected = optionButtons[0];
+
+    buttonStylesChoiceWrong(testSelected, optionButtons);
+    buttonsBeforeQuestion(optionButtons);
+
+    it.each(optionButtons)('should add class "pink-glow" to all buttons', (button) => {
+        expect(button.classList.contains('pink-glow')).toBe(true);
+    })
+
+    it.each(optionButtons)('should remove "data-index" attribute from all buttons that might have it', (button) => {
+        expect(button.hasAttribute('data-index')).toBe(false);
+    })
+
+    it.each(optionButtons)('should remove class "incorrect" from all buttons that might have it', (button) => {
+        expect(button.classList.contains('incorrect')).toBe(false);
+    })
+
+    it.each(optionButtons)('should remove class "correct" from all buttons that might have it', (button) => {
+        expect(button.classList.contains('correct')).toBe(false);
+    })
+
+    it.each(optionButtons)('should remove class "blue-glow" from all buttons that might have it', (button) => {
+        expect(button.classList.contains('blue-glow')).toBe(false);
+    })
+
+    it.each(optionButtons)('should remove class "white-glow" from all buttons that imght have it', (button) => {
+        expect(button.classList.contains('white glow')).toBe(false);
+    })
+
+    it.each(optionButtons)('should remove class "fade" from all buttons that might have it', (button) => {
+        expect(button.classList.contains('fade')).toBe(false);
+    })
+})
