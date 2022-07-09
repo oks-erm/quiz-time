@@ -1,4 +1,4 @@
-import { callScores } from './scoresapi.js';
+import { callScores, postScores } from './scoresapi.js';
 export let currentResult;
 export let scoresData = [ // backup scores data if api call fails
     {
@@ -34,4 +34,17 @@ export async function setScores() {
         document.getElementById('top-score').innerText = scoresData[0].Score;
         return scoresData;
     }
+}
+
+export function handleScores(currentScore, userName, utc) {
+    // create current result data to write it to scores API
+    currentResult = {
+        'Score': currentScore,
+        'Name': userName,
+        'Date': utc
+    };
+    // add curent to existing data to all existing result to filter out high scores
+    scoresData.push(currentResult);
+    // write curent resut to the scores API
+    postScores(currentScore, userName, utc);
 }

@@ -1,6 +1,6 @@
 import { buttonStylesChoiceCorrect, buttonStylesChoiceWrong, buttonsBeforeQuestion } from './buttonStyles.js';
 import { openModal } from './modal.js';
-import { setScores } from './scores.js';
+import { setScores, handleScores } from './scores.js';
 
 // API
 const easyLevel = 'https://opentdb.com/api.php?amount=20&difficulty=easy&type=multiple';
@@ -20,11 +20,16 @@ let answers;
 let options;
 let selectedAnswer;
 
+// Game area 
 const game = document.getElementById('game-area');
 const questionCount = document.getElementById('question-count');
 const question = document.getElementById('question-text');
 const optionButtons = document.getElementsByClassName('answer');
 const next = document.getElementById('next');
+
+// Scores
+const utc = new Date().toDateString().slice(4);
+const score = document.getElementById('score');
 
 // Add event listeners to difficulty buttons and change the attribute
 export function setDifficulty() {
@@ -104,6 +109,8 @@ export function getQuestion() {
        // hide next button
        next.classList.add('hide');
     } else {
+        handleScores(currentScore, userName, utc);
+        // hide the game area, open the modal with highscores
         game.classList.add('hide');
         openModal();
     }
