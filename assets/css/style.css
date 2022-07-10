@@ -694,3 +694,50 @@ button:hover,
     height: 160px;
   }
 }
+
+@media screen and (max-width: 999px) {
+  body {
+    min-height: 100vh;
+    min-height: fill-available;
+    min-height: -webkit-fill-available;
+  }
+  html {
+    height: fill-available;
+    height: -webkit-fill-available;
+  }
+
+  #box-border-bottom-pink {
+    margin-left: -1em;
+  }
+
+  #box-border-top-pink {
+    grid-area: 2/4/2/9;
+  }
+
+  #box-border-top-blue {
+    margin-left: 5em;
+  }
+
+  #score-label {
+    grid-area: 1/4/1/6;
+    margin-top: 3em;
+    text-align: inherit;
+  }
+
+  #top-score-label {
+    grid-area: 1/4/1/6;
+    margin-top: 1em;
+  }
+
+  .answer {
+    width: 100%;
+  }
+
+  #modal-content {
+    width: 95vw;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+}
