@@ -24,6 +24,7 @@ import {
     setDifficulty,
     eventHandler,
     difficulty,
+    setApiAddress,
     callAPI
 } from '../game.js';
 
@@ -172,6 +173,30 @@ describe('eventHandler()', () => {
 
         expect(typeof (result)).toBe('string');
         expect(difficulty).toBeDefined();
+    })
+})
+
+describe('setApiAddress()', () => {
+    const easyLevel = 'https://opentdb.com/api.php?amount=20&difficulty=easy&type=multiple';
+    const mediumLevel = 'https://opentdb.com/api.php?amount=20&difficulty=medium&type=multiple';
+    const expertLevel = 'https://opentdb.com/api.php?amount=20&difficulty=hard&type=multiple';
+
+    const difficulty1 = 'easy';
+    const difficulty2 = 'medium';
+    const difficulty3 = 'hard';
+
+    let result1 = setApiAddress(difficulty1);
+    let result2 = setApiAddress(difficulty2);
+    let result3 = setApiAddress(difficulty3);
+
+    it('should set apiAddress to easyLevel when difficulty "easy" is passed', () => {
+        expect(result1).toBe(easyLevel);
+    });
+    it('should set apiAddress to mediumLevel when difficulty "medium" is passed', () => {
+        expect(result2).toBe(mediumLevel);
+    });
+    it('should set apiAddress to expertLevel when anything but "easy" and "medium" is passed', () => {
+        expect(result3).toBe(expertLevel);
     })
 })
 
