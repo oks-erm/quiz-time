@@ -34,7 +34,8 @@ import {
     correctAnswer,
     correctIndex,
     answers,
-    options
+    options,
+    setAnswers
 } from '../game.js';
 
 const testResponseData = {
@@ -320,5 +321,22 @@ describe('prepareAnswers()', () => {
     })
     it('should assign "data-index" attribute to a button from optionButtons', () => {
         expect(optionButtons[correctIndex].hasAttribute('data-index')).toBe(true);
+    })
+})
+
+describe('setAnswers()', () => {
+    const optionButtons = document.getElementsByClassName('answer');
+    const answers = ['answer1', 'answer2', 'answer3', 'answer4'];
+    setAnswers(answers);
+    it('should make an array of optionButtons', () => {
+        expect(options.length).toBe(4);
+    })
+    it('should assign answers to answer buttons', () => {
+        for (let i = 0; i < options.length; i++) {
+            expect(options[i].innerHTML.includes(answers[i])).toBe(true);
+        }
+    })
+    it.each(optionButtons)('should set data-listener on difficulty buttons to true', (button) => {
+        expect(button.getAttribute('data-listener')).toBe('true');
     })
 })
