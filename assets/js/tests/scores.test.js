@@ -81,3 +81,11 @@ describe('setScores()', () => {
         return expect(parseInt(topScore)).toBe(testScoresData[0].Score);
     })
 })
+
+describe('sortScores()', () => {
+    sortScores(testScoresData);
+    it('should sort scores in descending order', () => {
+        expect(testScoresData[0].Score).toBe(10);
+        expect(testScoresData[0].Score > testScoresData[1].Score).toBe(true);
+    })
+})
