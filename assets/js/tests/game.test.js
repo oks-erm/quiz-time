@@ -22,6 +22,8 @@ global.location.assign = vi.fn();
 
 import {
     setDifficulty,
+    eventHandler,
+    difficulty,
     callAPI
 } from '../game.js';
 
@@ -157,6 +159,19 @@ describe('setDifficulty()', () => {
 
     it.each(buttons)('should set data-listener on difficulty buttons to true', (button) => {
         expect(button.getAttribute('data-listener')).toBe('true');
+    })
+})
+
+describe('eventHandler()', () => {
+    const buttons = document.getElementsByClassName('difficulty');
+
+    it.each(buttons)('should assign "difficulty" variable, when clicked', (button) => {
+        const e = new Event('click');
+        button.dispatchEvent(e);
+        const result = eventHandler(e);
+
+        expect(typeof (result)).toBe('string');
+        expect(difficulty).toBeDefined();
     })
 })
 

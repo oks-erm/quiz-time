@@ -13,7 +13,7 @@ let data = {};
 let n = 0;
 let currentScore = 0;
 let userName = sessionStorage.getItem('userName');
-let difficulty;
+export let difficulty;
 let currentQuestion;
 let correctIndex = null;
 let correctAnswer;
