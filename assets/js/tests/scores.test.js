@@ -89,3 +89,20 @@ describe('sortScores()', () => {
         expect(testScoresData[0].Score > testScoresData[1].Score).toBe(true);
     })
 })
+
+describe('handleScores()', () => {
+    const testScore = 1000;
+    const testName = 'TestName';
+    const testDate = 'Tst 01 2022';
+    handleScores(testScore, testName, testDate);
+    it('should create an object with passed data and return it', () => {
+        expect(currentResult.Score).toBe(testScore);
+        expect(currentResult.Name).toBe(testName);
+        expect(currentResult.Date).toBe(testDate);
+    })
+    it('should push current result to scoresData', async() => {
+        const testScoresData = await setScores();
+        handleScores(testScore, testName, testDate);
+        expect(testScoresData[testScoresData.length-1].Score).toBe(testScore);
+    })
+})
