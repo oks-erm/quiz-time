@@ -2,8 +2,7 @@ import { getQuestion } from './game.js';
 import { burst } from './animation.js';
 import { setScores } from './scores.js';
 
-const optionButtons = document.getElementsByClassName('answer');
-
+// Set up the game
 export function gamePreset() {
     getQuestion();
     //call scores API to get Top Score

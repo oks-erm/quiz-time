@@ -9,6 +9,7 @@ const mediumLevel = 'https://opentdb.com/api.php?amount=20&difficulty=medium&typ
 const expertLevel = 'https://opentdb.com/api.php?amount=20&difficulty=hard&type=multiple';
 let apiAddress;
 
+// Variables 
 let data = {};
 export let n = 0;
 export let currentScore = 0;
@@ -48,8 +49,6 @@ export function eventHandler(e) {
     difficulty = e.target.getAttribute('id');
     setApiAddress(difficulty);
     callAPI(apiAddress);
-    console.log(difficulty);
-    console.log(userName);
     return difficulty;
 }
 
@@ -79,7 +78,6 @@ export async function callAPI(apiAddress) {
     if (response.status > 199 && response.status < 300) {
         data = await response.json();
         difficultyToGame();
-        console.log(data);
         return data;
     } else {
     // navigate to the error page if response is not successful 
@@ -182,7 +180,7 @@ export function checkAnswer(e) {
     }
 }
 
-export function nextQuestion() {
+function nextQuestion() {
     // reset unanswered question styling
     $('.answer').prop('disabled', false);
     buttonsBeforeQuestion(optionButtons);
