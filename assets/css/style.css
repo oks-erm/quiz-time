@@ -659,3 +659,23 @@ button:hover,
 #sbmt:hover {
   background-color: #efc8fb;
 }
+
+.pink-glow:hover {
+  box-shadow: 0 0 0.2rem 2px #e872ef, 
+              0 0 1rem #b111bc, 
+              0 0 1em #4e1055, 
+              0 0 1rem 3px #ee6eee, 
+              0 0 0px 0.2rem #f60bff, 
+        inset 0 0 0.5rem 1px #f750ff, 
+        inset 0 0 20px 0.8rem #f2f5fb;
+}
+
+.blue-glow:hover {
+  box-shadow: 0 0 0.2rem 2px #51c6fe, 
+              0 0 1rem #84b5e3, 
+              0 0 1em #4e1055, 
+              0 0 2rem 2px #6ecaee, 
+              0 0 0px 0.2rem #3eb1fe, 
+        inset 0 0 0.5rem 1px #50a2ff, 
+        inset 0 0 17px 0.4rem #6ac4f6;
+}
