@@ -680,3 +680,17 @@ button:hover,
         inset 0 0 0.5rem 1px #50a2ff, 
         inset 0 0 17px 0.4rem #6ac4f6;
 }
+
+/* ---------------- Media queries */
+
+@media screen and (max-width: 1446px) {
+  #game-frame {
+    grid-template-rows: 1fr 20px 5px repeat(7, 12vh) 5px 20px 1fr;
+    grid-template-columns: 1fr 20px 5px repeat(6, 13vw) 5px 20px 1fr;
+  }
+
+  #logo {
+    margin: -1em 1em 0 0;
+    height: 160px;
+  }
+}
