@@ -37,7 +37,10 @@ import {
     options,
     setAnswers,
     selectedAnswer,
-    checkAnswer
+    checkAnswer,
+    getQuestion,
+    currentQuestion,
+    n
 } from '../game.js';
 
 const testResponseData = {
@@ -381,5 +384,51 @@ describe('checkAnswer()', () => {
         } else {
             expect(result).toBe('correct');
         }
+    })
+})
+
+describe('getQuestion()', () => {
+    const question = document.getElementById('question-text');
+    const questionCount = document.getElementById('question-count');
+    const game = document.getElementById('game-area');
+    const yourScore = document.getElementById('your-score');
+    const next = document.getElementById('next');
+
+    it('should display question count', () => {
+        getQuestion();
+        expect(questionCount.innerText.length > 0).toBe(true);
+    });
+
+    it('should display question', () => {
+        getQuestion();
+        expect(question.innerText.length > 0).toBe(true);
+    });
+
+    it('should define currentQuestion', () => {
+        getQuestion();
+        expect(currentQuestion).toBeDefined;
+    });
+
+    it('should hide "next" button', () => {
+        expect(next.classList.contains('hide')).toBe(true);
+    })
+
+    it('should increment question count', () => {
+        const n1 = n;
+        getQuestion();
+        const n2 = n;
+        expect(n1).not.toBe(n2);
+    });
+
+    it('should hide game area after 20 questions', () => {
+        for (let x = 0; x <= 16; x++) {
+            getQuestion();
+        }
+        expect(game.classList.contains('hide')).toBe(true);
+    })
+
+    it('should display your score', () => {
+        expect(yourScore.innerText.length > 0).toBe(true);
+        expect(yourScore.innerText.includes('Well done')).toBe(true);
     })
 })
