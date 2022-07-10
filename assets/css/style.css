@@ -639,6 +639,13 @@ table {
   }
 
 /* ----- Hover */
+#next:hover, 
+#play-again:hover,
+#change-name:hover {
+  border: 0.15rem solid #ffffff;
+  color: rgb(255 255 255);
+  animation: pulsate 3s infinite alternate;
+}
 
 a:hover,
 button:hover,
