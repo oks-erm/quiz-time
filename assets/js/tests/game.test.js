@@ -207,6 +207,7 @@ describe('difficultyToGame()', () => {
     const gameArea = document.getElementById('game-area');
 
     difficultyToGame();
+    
     it('should hide difficulty section', () => {
         expect(difficultyArea.classList.contains('hide')).toBe(true);
     });
