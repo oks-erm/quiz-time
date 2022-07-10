@@ -655,3 +655,7 @@ button:hover,
 #change-name:hover {
   cursor: url('../images/cursor.png'), auto;
 }
+
+#sbmt:hover {
+  background-color: #efc8fb;
+}
