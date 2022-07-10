@@ -45,3 +45,77 @@ describe('openModal()', () => {
         expect(global.location.assign).toBeCalledWith('funfact.html');
     })
 })
+
+describe('buildTable()', () => {
+    const tbody = document.querySelector('tbody');
+
+    const testArray = [{
+        "Score": "TestScore",
+        "Name": "TestName",
+        "Date": "TestDate"
+    },
+    {
+        "Score": "TestScore2",
+        "Name": "TestName2",
+        "Date": "TestDate2"
+    },
+    {
+        "Score": "TestScore3",
+        "Name": "TestName3",
+        "Date": "TestDate3"
+    },
+    {
+        "Score": "TestScore4",
+        "Name": "TestName4",
+        "Date": "TestDate4"
+    },
+    {
+        "Score": "TestScore5",
+        "Name": "TestName5",
+        "Date": "TestDate5"
+    },
+    {
+        "Score": "TestScore6",
+        "Name": "TestName6",
+        "Date": "TestDate6"
+    },
+    {
+        "Score": "TestScore7",
+        "Name": "TestName7",
+        "Date": "TestDate7"
+    },
+    {
+        "Score": "TestScore8",
+        "Name": "TestName8",
+        "Date": "TestDate8"
+    },
+    {
+        "Score": "TestScore9",
+        "Name": "TestName9",
+        "Date": "TestDate9"
+    }];
+
+    buildTable(testArray);
+
+    const rowsCount = tbody.childElementCount;
+    const row = tbody.firstElementChild;
+    const cells = document.getElementsByTagName('td');
+
+    it('should slice first 8 items of the array if there are more', () => {
+        expect(rowsCount <= 8).toBe(true);
+    })
+
+    it('should create <tr> element for each item of the array', () => {
+        expect(rowsCount === testArray.length || rowsCount === 8).toBe(true);
+    })
+
+    it('should create 3 cells for each row', () => {
+        expect(row.childElementCount).toBe(3);
+    })
+
+    it('should build a table with the array content', () => {
+        expect(cells[0].innerText).toBe(testArray[0].Score);
+        expect(cells[1].innerText).toBe(testArray[0].Name);
+        expect(cells[2].innerText).toBe(testArray[0].Date);
+    })
+})
