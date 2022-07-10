@@ -26,7 +26,8 @@ import {
     difficulty,
     setApiAddress,
     difficultyToGame,
-    callAPI
+    callAPI,
+    shuffle,
 } from '../game.js';
 
 const testResponseData = {
@@ -243,5 +244,14 @@ describe('callAPI()', () => {
         expect(global.location.assign).toBeCalled();
         expect(global.location.assign).toBeCalledWith('500.html');
     })
+})
 
+describe('shuffle()', () => {
+    it('should shuffle items in the array', () => {
+        const testArray = [1, 2, 3, 4, 5];
+        const result = shuffle(testArray);
+        console.log(result);
+        expect(result).not.toEqual([5, 4, 3, 2, 1]);
+        expect(result).not.toEqual([1, 2, 3, 4, 5]);
+    })
 })
