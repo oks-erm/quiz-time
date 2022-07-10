@@ -29,7 +29,12 @@ import {
     callAPI,
     shuffle,
     incrementScore,
-    currentScore
+    currentScore,
+    prepareAnswers,
+    correctAnswer,
+    correctIndex,
+    answers,
+    options
 } from '../game.js';
 
 const testResponseData = {
@@ -272,7 +277,7 @@ describe('incrementScore()', () => {
 
         expect(currentScoreAfter).not.toBe(currentScoreBefore);
         expect(result).toBe(10);
-    });
+    })
 
     it('should increment score by 20 if difficulty is "medium"', () => {
         const currentScoreBefore = currentScore;
@@ -282,7 +287,7 @@ describe('incrementScore()', () => {
 
         expect(currentScoreAfter).not.toBe(currentScoreBefore);
         expect(result).toBe(20);
-    });
+    })
 
     it('should increment score by 30 if difficulty is "expert"', () => {
         const currentScoreBefore = currentScore;
@@ -292,5 +297,28 @@ describe('incrementScore()', () => {
 
         expect(currentScoreAfter).not.toBe(currentScoreBefore);
         expect(result).toBe(30);
-    });
+    })
+})
+
+describe('prepareAnswers()', () => {
+    let testQuestion = {
+        "question": "Question 20?",
+        "correct_answer": "Correct Answer 20",
+        "incorrect_answers": ["Answer20.1", "Answer20.2", "Answer20.3"]
+    };
+    const optionButtons = document.getElementsByClassName('answer');
+
+    prepareAnswers(testQuestion);
+    it('should define correctAnswer', () => {
+        expect(correctAnswer).toBe(testQuestion.correct_answer);
+    })
+    it('should create an array of incorrect answers and the correct answer', () => {
+        expect(answers.length == 4).toBe(true);
+    })
+    it('should assign value to correctIndex', () => {
+        expect(correctIndex).not.toBe(null);
+    })
+    it('should assign "data-index" attribute to a button from optionButtons', () => {
+        expect(optionButtons[correctIndex].hasAttribute('data-index')).toBe(true);
+    })
 })

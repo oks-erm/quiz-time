@@ -12,14 +12,14 @@ let apiAddress;
 let data = {};
 export let n = 0;
 export let currentScore = 0;
-let userName = sessionStorage.getItem('userName');
+export let userName = sessionStorage.getItem('userName');
 export let difficulty;
-let currentQuestion;
-let correctIndex = null;
-let correctAnswer;
-let answers;
-let options;
-let selectedAnswer;
+export let currentQuestion;
+export let correctIndex = null;
+export let correctAnswer;
+export let answers;
+export let options;
+export let selectedAnswer;
 
 // Game area 
 const game = document.getElementById('game-area');
