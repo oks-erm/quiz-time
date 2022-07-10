@@ -25,6 +25,7 @@ import {
     eventHandler,
     difficulty,
     setApiAddress,
+    difficultyToGame,
     callAPI
 } from '../game.js';
 
@@ -153,6 +154,7 @@ vi.stubGlobal('fetch', testFetch);
 vi.mock('../animation');
 vi.mock('../scores');
 vi.mock('../modal');
+vi.mock('../preset');
 
 describe('setDifficulty()', () => {
     setDifficulty();
@@ -197,6 +199,19 @@ describe('setApiAddress()', () => {
     });
     it('should set apiAddress to expertLevel when anything but "easy" and "medium" is passed', () => {
         expect(result3).toBe(expertLevel);
+    })
+})
+
+describe('difficultyToGame()', () => {
+    const difficultyArea = document.getElementById('difficulty');
+    const gameArea = document.getElementById('game-area');
+
+    difficultyToGame();
+    it('should hide difficulty section', () => {
+        expect(difficultyArea.classList.contains('hide')).toBe(true);
+    });
+    it('should display game area', () => {
+        expect(gameArea.classList.contains('hide')).toBe(false);
     })
 })
 
