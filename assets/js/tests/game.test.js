@@ -21,6 +21,7 @@ global.alert = vi.fn();
 global.location.assign = vi.fn();
 
 import {
+    setDifficulty,
     callAPI
 } from '../game.js';
 
@@ -149,6 +150,15 @@ vi.stubGlobal('fetch', testFetch);
 vi.mock('../animation');
 vi.mock('../scores');
 vi.mock('../modal');
+
+describe('setDifficulty()', () => {
+    setDifficulty();
+    const buttons = document.getElementsByClassName('difficulty');
+
+    it.each(buttons)('should set data-listener on difficulty buttons to true', (button) => {
+        expect(button.getAttribute('data-listener')).toBe('true');
+    })
+})
 
 describe('callAPI()', () => {
     const testAPI = 'https://dummy-site.dev/restapi';
