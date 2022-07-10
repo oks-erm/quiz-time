@@ -10,8 +10,8 @@ const expertLevel = 'https://opentdb.com/api.php?amount=20&difficulty=hard&type=
 let apiAddress;
 
 let data = {};
-let n = 0;
-let currentScore = 0;
+export let n = 0;
+export let currentScore = 0;
 let userName = sessionStorage.getItem('userName');
 export let difficulty;
 let currentQuestion;

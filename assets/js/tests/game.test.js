@@ -28,6 +28,8 @@ import {
     difficultyToGame,
     callAPI,
     shuffle,
+    incrementScore,
+    currentScore
 } from '../game.js';
 
 const testResponseData = {
@@ -254,4 +256,41 @@ describe('shuffle()', () => {
         expect(result).not.toEqual([5, 4, 3, 2, 1]);
         expect(result).not.toEqual([1, 2, 3, 4, 5]);
     })
+})
+
+describe('incrementScore()', () => {
+    const score = document.getElementById('score');
+    const difficulty1 = 'easy';
+    const difficulty2 = 'medium';
+    const difficulty3 = 'expert';
+
+    it('should increment score by 10 if difficulty is "easy"', () => {
+        const currentScoreBefore = currentScore;
+        incrementScore(difficulty1);
+        const currentScoreAfter = score.innerText;
+        const result = currentScoreAfter - currentScoreBefore;
+
+        expect(currentScoreAfter).not.toBe(currentScoreBefore);
+        expect(result).toBe(10);
+    });
+
+    it('should increment score by 20 if difficulty is "medium"', () => {
+        const currentScoreBefore = currentScore;
+        incrementScore(difficulty2);
+        const currentScoreAfter = score.innerText;
+        const result = currentScoreAfter - currentScoreBefore;
+
+        expect(currentScoreAfter).not.toBe(currentScoreBefore);
+        expect(result).toBe(20);
+    });
+
+    it('should increment score by 30 if difficulty is "expert"', () => {
+        const currentScoreBefore = currentScore;
+        incrementScore(difficulty3);
+        const currentScoreAfter = score.innerText;
+        const result = currentScoreAfter - currentScoreBefore;
+
+        expect(currentScoreAfter).not.toBe(currentScoreBefore);
+        expect(result).toBe(30);
+    });
 })
