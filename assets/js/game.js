@@ -175,8 +175,10 @@ export function checkAnswer(e) {
         // style buttons according to the answer
         buttonStylesChoiceCorrect(selectedAnswer, optionButtons);
         incrementScore(difficulty);
+        return "correct";
     } else {
         buttonStylesChoiceWrong(selectedAnswer, optionButtons);
+        return "wrong";
     }
 }
 

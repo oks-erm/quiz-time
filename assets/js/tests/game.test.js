@@ -35,7 +35,9 @@ import {
     correctIndex,
     answers,
     options,
-    setAnswers
+    setAnswers,
+    selectedAnswer,
+    checkAnswer
 } from '../game.js';
 
 const testResponseData = {
@@ -338,5 +340,46 @@ describe('setAnswers()', () => {
     })
     it.each(optionButtons)('should set data-listener on difficulty buttons to true', (button) => {
         expect(button.getAttribute('data-listener')).toBe('true');
+    })
+})
+
+describe('checkAnswer()', () => {
+    const optionButtons = document.getElementsByClassName('answer');
+    const next = document.getElementById('next');
+
+    it.each(optionButtons)('should assign a clicked button to selectedAnswers', (button) => {
+        const e = new Event('click');
+        button.dispatchEvent(e);
+        checkAnswer(e);
+
+        expect(selectedAnswer).toBeDefined();
+    })
+
+    it.each(optionButtons)('should remove class "hide" from the "next" button', (button) => {
+        const e = new Event('click');
+        button.dispatchEvent(e);
+        checkAnswer(e);
+
+        expect(next.classList.contains('hide')).toBe(false);
+    })
+
+    it.each(optionButtons)('should add event listener to the "next" button', (button) => {
+        const e = new Event('click');
+        button.dispatchEvent(e);
+        checkAnswer(e);
+
+        expect(next.getAttribute('data-listener')).toBe('true');
+    })
+
+    it.each(optionButtons)('should return "wrong" if a clicked button does not have "data-index" attribute and "correct" if it does', (button) => {
+        const e = new Event('click');
+        button.dispatchEvent(e);
+        let result = checkAnswer(e);
+
+        if(!selectedAnswer.hasAttribute('data-index')) {
+            expect(result).toBe('wrong');
+        } else {
+            expect(result).toBe('correct');
+        }
     })
 })
