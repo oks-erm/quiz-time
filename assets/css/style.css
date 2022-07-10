@@ -637,3 +637,14 @@ table {
         0 0 80px #ff00ee;
     }
   }
+
+/* ----- Hover */
+
+a:hover,
+button:hover,
+#next:hover,
+#sbmt:hover,
+#play-again:hover,
+#change-name:hover {
+  cursor: url('../images/cursor.png'), auto;
+}
