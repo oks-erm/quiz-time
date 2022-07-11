@@ -740,7 +740,7 @@ button:hover,
 @media screen and (max-width: 767px) {
   /* Defaults and Game frame */
   body {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
   #game-frame {
@@ -751,6 +751,7 @@ button:hover,
   #content-box {
     height: 220px;
     width: 300px;
+    margin-bottom: -5em;
   }
 
   #logo {
@@ -765,13 +766,17 @@ button:hover,
     grid-area: 5/4/7/10;
   }
 
+  #ready{
+    margin-bottom: -0.5em;
+  }
+
   h2 {
     line-height: 300%;
     font-size: 100%;
   }
 
   button {
-    width: 70%;
+    width: 75%;
   }
 
   #sbmt {
@@ -835,6 +840,7 @@ button:hover,
 
   #next {
     grid-area: 1/1/1/6;
+    margin-bottom: 0;
   }
 
   th,
