@@ -34,11 +34,6 @@ const yourScore = document.getElementById('your-score');
 const utc = new Date().toDateString().slice(4);
 const score = document.getElementById('score');
 
-// get the viewport height and multiple it by 1% to get a value for a vh unit
-let vh = window.innerHeight * 0.01;
-// set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-
 // Add event listeners to difficulty buttons and change the attribute
 export function setDifficulty() {
     for (let button of document.getElementsByClassName('difficulty')) {
@@ -198,3 +193,15 @@ $(window).on("load", function () {
     $(".loader-wrapper").fadeOut("slow");
     setDifficulty();
 })
+
+// get the viewport height and multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+// listen to the resize event
+window.addEventListener('resize', () => {
+    // set the value again based on the new viewport size
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
