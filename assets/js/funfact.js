@@ -1,4 +1,5 @@
-let fact;
+import { getData } from "./getfact.js";
+
 const funfactText = document.getElementById('funfact-text');
 const playAgain = document.getElementById('play-again');
 const changeName = document.getElementById('change-name');
@@ -9,17 +10,6 @@ let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 getData();
-
-// get a random fact from API
-async function getData() {
-    const response = await $.ajax({
-      url: 'https://uselessfacts.jsph.pl/random.json?language=en',
-      method: "GET",
-      dataType: "json"
-    });
-    fact = response.text;
-    writeData(fact);
-  }
 
 // write response result to the text field or a backup text if the API call fails 
 export function writeData(fact) {

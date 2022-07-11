@@ -24,9 +24,11 @@ global.location.assign = vi.fn();
 document.body.innerHTML = '';
 document.write(htmlDocumentContent);
 
+import { getData } from '../getfact.js';
+getData = vi.fn(() => {return "Funfact"});
+vi.mock('../getfact', () => vi.fn());
 global.$ = require('jquery')(window);
 global.$ = require('jquery');
-
 import { writeData, setEventListeners } from '../funfact.js';
 
 describe('writeData()', () => {
