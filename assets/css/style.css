@@ -64,6 +64,7 @@
     grid-area: 2/6/2/10;
     height: 1px;
     margin-right: 1em;
+    margin-left: 2em;
   }
   
   #box-border-right-blue {
@@ -683,7 +684,7 @@ button:hover,
 
 /* ---------------- Media queries */
 
-@media screen and (max-width: 1446px) {
+@media only screen and (max-width: 1446px) {
   #game-frame {
     grid-template-rows: 1fr 20px 5px repeat(7, 12%) 5px 20px 1fr;
     grid-template-columns: 1fr 20px 5px repeat(6, 13%) 5px 20px 1fr;
@@ -699,7 +700,7 @@ button:hover,
   }
 }
 
-@media screen and (max-width: 999px) {
+@media only screen and (max-width: 999px) {
   #game-frame {
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
@@ -707,10 +708,6 @@ button:hover,
 
   #box-border-bottom-pink {
     margin-left: -1em;
-  }
-
-  #box-border-top-pink {
-    grid-area: 2/4/2/9;
   }
 
   #box-border-top-blue {
@@ -745,7 +742,7 @@ button:hover,
   }
 }
 
-@media screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   /* Defaults and Game frame */
   body {
     font-size: 1em;
@@ -878,10 +875,10 @@ button:hover,
   }
 }
 
-@media screen and (orientation:landscape) and
-(min-device-width: 420px) and (max-device-width: 920px) {
+@media only screen and (orientation:landscape) and
+(min-device-width: 520px) and (max-device-width: 900px) {
    #game-frame, #funfact, #modal-wrapper, .error {
-    height: 800px;
+    height: 850px;
    }
 
   #ready {
