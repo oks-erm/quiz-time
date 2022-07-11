@@ -693,6 +693,10 @@ button:hover,
     margin: -1em 1em 0 0;
     height: 160px;
   }
+
+  #ready {
+    font-size: 3em;
+  }
 }
 
 @media screen and (max-width: 999px) {
@@ -735,6 +739,10 @@ button:hover,
   h1 {
     font-size: 3em;
   }
+
+  #ready {
+    margin-bottom: -1em;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -751,7 +759,7 @@ button:hover,
   #content-box {
     height: 220px;
     width: 300px;
-    margin-bottom: -8em;
+    margin-bottom: -7em;
   }
 
   #logo {
@@ -768,6 +776,7 @@ button:hover,
 
   #ready{
     margin-bottom: -0.5em;
+    font-size: 2.5em;
   }
 
   h2 {
@@ -780,7 +789,7 @@ button:hover,
   }
 
   #sbmt {
-    height: 4vh;
+    height: 40px;
   }
   /* Neon frame */
 
@@ -871,9 +880,13 @@ button:hover,
 
 @media screen and (orientation:landscape) and
 (min-device-width: 420px) and (max-device-width: 920px) {
-   #game-frame, #funfact, #modal-wrapper {
+   #game-frame, #funfact, #modal-wrapper, .error {
     height: 800px;
    }
+
+  #ready {
+    margin-bottom: -1em;
+  }
 
      /* Neon frame */
 
