@@ -696,13 +696,9 @@ button:hover,
 }
 
 @media screen and (max-width: 999px) {
-  body {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-  }
-  html {
-    height: fill-available;
-    height: -webkit-fill-available;
+  #game-frame {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
   }
 
   #box-border-bottom-pink {
@@ -782,7 +778,7 @@ button:hover,
     height: 4vh;
   }
   /* Neon frame */
-  
+
   #box-border-bottom-blue {
     display: none;
   }
@@ -847,6 +843,10 @@ button:hover,
   }
 
   /* Fun Fact page */
+  #funfact {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
   #funfact-container {
     width: 85%;
     margin: 1em 0;
@@ -855,5 +855,10 @@ button:hover,
   #fun-neon, 
   #fact-neon {
     line-height: 1.15;
+  }
+
+  /* Error pages */
+  .error {
+    height: calc(var(--vh, 1vh) * 100);
   }
 }

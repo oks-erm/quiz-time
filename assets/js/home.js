@@ -1,6 +1,11 @@
 let input;
 const form = window.document.querySelector('form');
 
+// get the viewport height and multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 export function validateInput(input) {
     // Make sure there is input and it's not spaces only
     if (!input || input.trim().length === 0) {

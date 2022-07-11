@@ -3,6 +3,11 @@ const funfactText = document.getElementById('funfact-text');
 const playAgain = document.getElementById('play-again');
 const changeName = document.getElementById('change-name');
 
+// get the viewport height and multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 // get a random fact from API
 async function getData() {
     const response = await $.ajax({
