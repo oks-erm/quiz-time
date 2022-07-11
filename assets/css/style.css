@@ -698,7 +698,6 @@ button:hover,
 @media screen and (max-width: 999px) {
   body {
     min-height: 100vh;
-    min-height: fill-available;
     min-height: -webkit-fill-available;
   }
   html {
@@ -749,7 +748,7 @@ button:hover,
   }
 
   #game-frame {
-    grid-template-rows: 1fr 15px 5px repeat(7, 12.5vh) 5px 15px 1fr;
+    grid-template-rows: 1fr 15px 5px repeat(7, 12.5%) 5px 15px 1fr;
     grid-template-columns: 1fr 15px 5px repeat(6, 13vw) 5px 15px 1fr;
   }
 
@@ -780,13 +779,16 @@ button:hover,
   }
 
   #sbmt {
-    padding: 0.9em;
+    height: 4vh;
   }
   /* Neon frame */
+  
   #box-border-bottom-blue {
-    grid-area: 11/6/11/10;
-    margin-right: 1em;
-    margin-left: 0;
+    display: none;
+  }
+
+  #box-border-bottom-pink {
+    display: none;
   }
 
   #box-border-left-pink {
@@ -794,13 +796,14 @@ button:hover,
   }
 
   #box-border-top-blue {
-    grid-area: 3/5/3/10;
+    display: none;
+  }
+
+  #box-border-top-pink {
+    display: none;
   }
 
   #box-border-left-blue {
-    grid-area: 6/2/12/2;
-    margin-top: -4em;
-    margin-bottom: 2em;
     display: none;
   }
 
@@ -809,7 +812,6 @@ button:hover,
   }
 
   #box-border-right-pink {
-    grid-area: 5/11/10/12;
     display: none;
   }
 
@@ -832,7 +834,7 @@ button:hover,
 
   #question-area {
     margin-top: 3em;
-    width: 100%;
+    width: 110%;
   }
 
   #next {
