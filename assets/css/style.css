@@ -716,6 +716,7 @@ button:hover,
 
 /* ---------------- Media queries */
 
+/* ----- Laptops */
 @media only screen and (max-width: 1446px) {
   #game-frame {
     grid-template-rows: 1fr 20px 5px repeat(7, 12%) 5px 20px 1fr;
@@ -732,6 +733,7 @@ button:hover,
   }
 }
 
+/* ----- Tablets */
 @media only screen and (max-width: 991px) {
   #game-frame {
     height: 100vh;
@@ -774,6 +776,7 @@ button:hover,
   }
 }
 
+/* ----- Phones */
 @media only screen and (max-width: 767px) {
   /* Defaults and Game frame */
   body {
@@ -820,8 +823,8 @@ button:hover,
   #sbmt {
     height: 40px;
   }
-  /* Neon frame */
 
+  /* Neon frame */
   #box-border-bottom-blue {
     display: none;
   }
@@ -907,6 +910,7 @@ button:hover,
   }
 }
 
+/* ----- Orientation */
 @media only screen and (orientation:landscape) and
 (min-width: 420px) and (max-width: 991px) {
 #orientation {
@@ -915,3 +919,14 @@ button:hover,
 }
 }
 
+/* ----- Accessibility */
+@media screen and (prefers-reduced-motion) { 
+  h1,
+  #next,
+  #play-again,
+  #change-name,
+  .error button {
+      animation: none;
+    }
+  }
+  
