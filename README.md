@@ -1,7 +1,7 @@
 # Quiz Time (JavaScript Game)
 ![Website Mock Up](assets/images/readme/mockup.png)
 # Purpose
-This project is a dynamic website - trivia quiz [Quiz Time](https://). The game provides different levels of difficulty and includes a random fun fact feature between games. The game fetches data from external APIs and provides a variety of questions and facts, thefore it keeps the player amused for multiple game sessions.
+This project is a dynamic website - trivia quiz [Quiz Time](https://oks-erm.github.io/quiz-time/). The game provides different levels of difficulty and includes a random fun fact feature between games. The game fetches data from external APIs and provides a variety of questions and facts, thefore it keeps the player amused for multiple game sessions.
 The games stores data about all game, this way providing a real competition between all players over time. 
 
 The core purposes of the website:
@@ -12,7 +12,7 @@ The core purposes of the website:
 
 The website is built using HTML,CSS,JavaScript and Google Apps Script as a Milestone Project#2 for the Code Institute's Full Stack Developer course.  
 
-[The live website is available here](https:)
+[The live website is available here]( https://oks-erm.github.io/quiz-time/)
 ___
 # UX Design
 ## User stories

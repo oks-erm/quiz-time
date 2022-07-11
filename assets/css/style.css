@@ -154,7 +154,7 @@
 
 #game-frame {
     display: grid;
-    grid-template-rows: 1fr 20px 5px repeat(7, 11.5vh) 5px 20px 1fr;
+    grid-template-rows: 1fr 20px 5px repeat(7, 11.5%) 5px 20px 1fr;
     grid-template-columns: 1fr 20px 5px repeat(6, 210px) 5px 20px 1fr;
     height: 100vh;
     background: url(../images/wallbg2.webp) no-repeat center center;
@@ -338,11 +338,11 @@
 }
 
 #modal-wrapper {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
@@ -685,8 +685,8 @@ button:hover,
 
 @media screen and (max-width: 1446px) {
   #game-frame {
-    grid-template-rows: 1fr 20px 5px repeat(7, 12vh) 5px 20px 1fr;
-    grid-template-columns: 1fr 20px 5px repeat(6, 13vw) 5px 20px 1fr;
+    grid-template-rows: 1fr 20px 5px repeat(7, 12%) 5px 20px 1fr;
+    grid-template-columns: 1fr 20px 5px repeat(6, 13%) 5px 20px 1fr;
   }
 
   #logo {
@@ -745,7 +745,7 @@ button:hover,
 
   #game-frame {
     grid-template-rows: 1fr 15px 5px repeat(7, 12.5%) 5px 15px 1fr;
-    grid-template-columns: 1fr 15px 5px repeat(6, 13vw) 5px 15px 1fr;
+    grid-template-columns: 1fr 15px 5px repeat(6, 13%) 5px 15px 1fr;
   }
 
   #content-box {
@@ -867,4 +867,11 @@ button:hover,
   .error {
     height: calc(var(--vh, 1vh) * 100);
   }
+}
+
+@media screen and (orientation:landscape) and
+(min-device-width: 420px) and (max-device-width: 920px) {
+   #game-frame, #funfact, #modal-wrapper {
+    height: 800px;
+   }
 }
