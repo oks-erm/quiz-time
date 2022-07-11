@@ -874,4 +874,38 @@ button:hover,
    #game-frame, #funfact, #modal-wrapper {
     height: 800px;
    }
+
+     /* Neon frame */
+
+  #box-border-bottom-blue {
+    display: none;
+  }
+
+  #box-border-bottom-pink {
+    display: none;
+  }
+
+  #box-border-left-pink {
+    display: none;
+  }
+
+  #box-border-top-blue {
+    display: none;
+  }
+
+  #box-border-top-pink {
+    display: none;
+  }
+
+  #box-border-left-blue {
+    display: none;
+  }
+
+  #box-border-right-blue {
+    display: none;
+  }
+
+  #box-border-right-pink {
+    display: none;
+  }
 }
