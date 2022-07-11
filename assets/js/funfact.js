@@ -8,6 +8,8 @@ let vh = window.innerHeight * 0.01;
 // set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+getData();
+
 // get a random fact from API
 async function getData() {
     const response = await $.ajax({
@@ -42,9 +44,10 @@ export function setEventListeners() {
     };
   }
 
-// add event listener to the window to fade out loader when the page is loaded
-$(window).on("load", function () {
+// fade the loader when getData function is completed
+$.when(getData()).done(function(){
     $(".loader-wrapper").fadeOut("slow");
-    getData();
     setEventListeners();
   })
+
+
