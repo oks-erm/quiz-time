@@ -32,3 +32,49 @@ ___
 - I want to read funny nicknames of other players and create my own. 
 
 ### All users want to be able to access and comfortably view the website on mobile devices.
+
+___
+## Structure
+### Home Page
+- Helps the user to understand what kind of the game it is.
+- Invites to enter name and start the game.
+- Grabs the user's attention and grips it with bold design.
+    #### User Goal:
+    >   - Understand the main purpose of the website.
+    >   - Easily navigate and interact with the website.
+    >   - Be amused.
+    #### Website Goal:
+    >   - Interest and engage the user.
+
+### Game Page
+- Allows to choose difficulty level.
+- Allows to play the game.
+- Displays highscores in the end of the game.
+    #### User Goal:
+    >   - Take a quiz.
+    >   - Be amused.
+    >   - Compare their result with other players.
+    #### Website Goal:
+    >   - Entertain the user with the quiz.
+    >   - Initiate future engagement, such as returning to beat the top score or make sure nobody has beaten yours.
+
+### Funfact Page
+- Provides a random interesting fact to entertain the user and extend their knowledge.
+- Offer scenarios of further actions, such as "play again" or "change name and play again".
+- For the first time player this page is a suprprise.
+    #### User Goal:
+    >   - To be amused.
+    >   - To choose the way to continue playing.
+    #### Website Goal:
+    >   - Entertain and educate the user.
+    >   - Offer further engagement.
+
+### Error Pages (404, 500)
+- Informs the user about a broblem occured and offer further actions to keep the user on the website.
+    #### User Goal:
+    >   - Understand what to do in case of an error.
+    #### Website Goal:
+    >   - Keep the user on the website.
+    >   - Make an unpleasant event of getting an error fun for the user.
+___
+## Wireframes
