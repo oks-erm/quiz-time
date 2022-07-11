@@ -562,7 +562,7 @@ table {
 /* ---------------- Error Page */
 
 .error {
-  background-color: #070707;
+  background-color: var(--dark-blue);
   color: var(--white);
   display: flex;
   flex-direction: column;
@@ -573,7 +573,7 @@ table {
 }
 
 .error button {
-  background: #070707;
+  background: var(--dark-blue);
   color: var(--white);
   padding: 0.4em 2em;
   margin: 1.5em 0.5em;
@@ -922,7 +922,7 @@ button:hover,
 }
 
 /* ----- Accessibility */
-@media screen and (prefers-reduced-motion) { 
+@media only screen and (prefers-reduced-motion) { 
   h1,
   #next,
   #play-again,

@@ -85,65 +85,71 @@ ___
 
 ## Design
 
-The project's design springs from the easthetics of gaming machines, because setting a quiz in more obvious pub settings seemed not acceptable for some groups of potential players. A pub setting does not seem very appropriate for younger players, religious and ethnic groups, whose customs disaprove of alcohol and pubs by assosiation. To make it apealing for broader audience a more neutral solution was opted for. 
+The project's design springs from the easthetics of gaming machines and [God's Own Junkyard](https://www.godsownjunkyard.co.uk/) art space. One of the reasons is that setting a quiz in more obvious pub settings seemed not acceptable for some groups of potential players. A pub setting does not seem very appropriate for younger players, religious and ethnic groups, whose customs disaprove of alcohol and pubs by assosiation. To make it apealing for broader audience a more neutral solution was opted for. 
 
 ### Colour Scheme
 
 ![Palette](assets/images/readme/palette.png)
 Colour scheme is inspired by neon signs and neon glowing effects are used throughout the website. Shades of magenta and blue are bold and cheerful balanced out with deep black-blue and pastel light blue and grey. 
 
-#### **Shades of Whitesmoke** 
-represent calm, air and light; two shades are used for volume effect.  
-> ![white1](assets/images/readme/white1.png) #efefef (Background Colour, Text Colour on dark background);
+#### **Cultured White** 
+#f8f8f8 - is used for neon glow effect and spreading light effect.
 
-> ![white2](assets/images/readme/white2.png) #f8f8f8 (Background Colour, Borders). 
+#### **Beau Blue** 
+#B9D3E8 - is used for background in the blocks with text content.
 
-#### **Shades of Charcoal Grey** 
-are cool, neutral and balanced, just like Sofing wants its practitioners to be. It is also known as a sophisticated colour. It is used to bring some contrast and draw attention to the ethos block on the home page. Several shades are used to avoid excessive contrast and heavy headings but provide accessibility. 
-> ![grey2](assets/images/readme/grey2.png) #333333 (Background Colour);
+#### **Capri Blue** 
+#45C0FD - is used for neon glow effect and spreading light effect.
 
-> ![grey3](assets/images/readme/grey3.png) #515151 (Default Text Colour);
+#### **Magenta**  
+#FF00FE - is used for neon glow effect, animated glowing, spreading light effect and glowing headings.
 
-> ![grey1](assets/images/readme/grey1.png) #6a6a6a (Headings, Borders).
+#### **Space Cadet**  
+#181B3B - is used for shadows and typography.
 
-#### **Coral** 
-represents friendliness, cheerfulness and boldness. Moreover, it seems to be one of the typical sofa colours and it refers to the [famous couch from Friends tv series](https://www.texomashomepage.com/wp-content/uploads/sites/41/2019/09/friends-orange-couch.jpg).
-> ![coral](assets/images/readme/coral.png) #e06666 (Background Colour).
-
-#### **Reef**  
-represents trust and tranquillity. In fact, [57% of men and 35% of women say blue is their favourite colour](https://ceblog.s3.amazonaws.com/wp-content/uploads/2018/03/24214633/website-color-palettes-35.png), it is the most common “favourite” colour among the majority of the population. So, as I want to appeal to a broad audience, I decided to implement it.
-> ![reef](assets/images/readme/reef.png) #a6ceef (Background Colour, Buttons, Hover effects, Gradient for Logo and Headings).
+#### **Rich Black**  
+#181B3B - is used for background, background merging with background image and shadows.
 
 ### Typography
 
-[Koulen](https://fonts.google.com/specimen/Koulen) was intended to be used for logo and headings, however, it turned out to be too loud and intense if used for all headings, and also it compromised the legibility of many headings. Therefore, it was decided to limit its implementation and prefer softer and more neutral font for most of the headings throughout the website.
+[Nothing You Could Do](https://fonts.google.com/specimen/Nothing+You+Could+Do?query=nothing+you) is used for headings. It is nonchalant, whilst legible, works well with glowing effect.
 
-[Montserrat](https://fonts.google.com/specimen/Montserrat) was chosen for this purpose. It is neutral and easy to read. 
+[Oxygen](https://fonts.google.com/specimen/Oxygen?query=oxygen) was chosen for body text. It is neutral, soft and easy to read even on the smaller screens.
 
-[Lato](https://fonts.google.com/specimen/Lato) was chosen for body text as it is light and easy to read.
+[God's own junkyard](https://allbestfonts.com/gods-own-junkyard-pro/) is used for the Fun Fact page, as this page is a surprise for the first time user it was decided to use slightly different styling for it. As the page has a plenty of free space, I found it to be a great opportunity to implement the most stereotypical neon font for aesthetic purpose, as it looks good only in bigger sizes.
 
 ### Images
 
-The images in this project were sourced from [Unsplash](https://unsplash.com/) and [iStock](https://www.istockphoto.com). They were specifically selected to correlate with the main website colour palette and increase the aesthetic impact of the design.
+The images in this project were sourced from [ShutterStock](https://www.shutterstock.com/). They were specifically selected to set up the vibe of the website and increase the aesthetic impact of the design.
 
 ### Visual Effects
 
 #### Shadows
-As the Home Page consists of multiple colourful overlapping blocks, it was important to add volume and make the content easier to perceive so the viewer's eye doesn't have to focus on understanding spatial relationships between elements, which might be daunting. However, to provide better performance on mobile devices, it was implemented only for screens larger than 992px.
-
+As the Home Page consists of the form with two input elements: a text field and a submit button. It was important to add volume and make them more appealing to engage, especially with such a bold and vibrant surroundings with plenty of neon glowing. 
 
 #### Logo and Page Headings Gradient
-Sofing movement does not have a logo at the moment. Hence, the text logo was established. Although the font provided the style, it still looked rather bland, flat and intensively dull in default text colours and illegible or inappropriate when executed in colours. Thus, it was decided to implement a gradient of [Charcoal](#shades-of-charcoal-grey) and [Reef](#reef). A similar gradient was later applied to the Philosofy Page Heading and the Meetups Page Heading, but based on [Coral](#coral), to maintain the colour palette.   
+Logo was sourced from a shutterstock image, edited by me to maintain the colour palette. Also it inspired the CSS neon frame. 
 
-#### Blocks with CTA
-Each block of the Home Page that we want users to interact with and that contains a Call To Action, such as "join the club" or "follow the link", slightly grows (3%) whilst hovered over with a mouse. It provides a stimulating visual effect and draws users' attention even if hovered over with a mouse by accident whilst scrolling. The effect was implemented only for screens larger than 992px to provide better performance on mobile devices.  
+#### Neon frame
+Initially the neon frame was a part of the background image, but it turned out to be a poor solution considering the required responsiveness. So the adaptive neon frame was implemented. Neon glowing effect was immitated by multiple shadows in CSS and the frame was established with a grid.  
 
-#### Buttons
-Each button offers a similar growing effect described above combined with a change of its background colour: it is blue by default, and it turns subtle green hovered over with a mouse. The green colour was opted for because it is known to be the [best colour for effective CTA buttons](https://www.wordstream.com/blog/ws/2015/02/20/call-to-action-buttons). To provide better performance on mobile devices, it was implemented only for screens larger than 992px.
+#### Buttons and Hover Effects
+There are two types of buttons: game buttons and navigation buttons. 
+Game buttons offer hover over effect: it changes inset shadow colour to invite the user to engage and demonstrate that the elements are interactive.
+Navigation buttons have subtle glowing animation at all times, as well as changing colour when being hoved over with the mouse.
 
-#### Links
-Due to the bold design and abundance of content on the Home Page, it seemed to be necessary to draw additional attention to the links. When being hovered over with a mouse, links change the text colour and the background colour (depending on the parent block design), and the change is executed with an animated effect - "running" from left to right. To provide better performance on mobile devices, it was implemented only for screens larger than 992px.
+#### Animated glowing
+Animated glowing pulsating effect is used for headings and navigation buttons to create the neon aesthetics. The glowing is very subtle, so it does not compromise legibility. Keeping in mind that it might cause accessibility issues, the website includes a media query for people who prefer reduced motion. 
 
-#### Navbar Hover effect
-The navbar includes a hover-over effect to make the experience more interactive and navigation more intuitive. When the user engages with the link or hovers over the link, its background colour changes to light blue to subtly highlight the item without compromising legibility.
+#### Loader
+All pages are fitted with loaders(magenta dots on black background), because at many points the website interracts with external APIs and awaits for the data, which might take some time, it was decided to implement a loader to inform the user that something is in progress and the website is not broken. Moreover the slow fadeout effect provides a smooth aesthetical transition between pages even if we do not happen to see the loader running. 
+
+#### Confetti burst
+When the highscores modal appears it is celebrated with a confetti burst created with [Confetti](https://www.npmjs.com/package/canvas-confetti) JS library. 
+
+#### Increment Score animation
+When the score increments it is accompanied with a little burst of particles around the changing number. The effect is created with [Mo JS](https://mojs.github.io/) JS library.
+
+#### Cursor
+For all elements that can be clicked a custom cursor appears when being hovered over with the mouse.
 ___

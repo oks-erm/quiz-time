@@ -44,5 +44,5 @@ $.when(getData()).done(function () {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
-
+// (c) https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
 })
