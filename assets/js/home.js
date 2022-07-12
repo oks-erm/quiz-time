@@ -30,7 +30,7 @@ if (form.getAttribute('data-listener') !== "true") {
 // add event listener to the window to fade out loader when the page is loaded
 $(window).on("load", function () {
     $(".loader-wrapper").fadeOut("slow");
-})
+});
 
 // get the viewport height and multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
