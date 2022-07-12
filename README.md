@@ -254,3 +254,40 @@ ___
 - [Markdown Tables Generator](https://www.tablesgenerator.com/) to generate tables for the readme file.
 - Code Institute's Gitpod Template to generate the workspace for the project.
 ___
+
+# Deployment
+
+This project was deployed to GitHub pages. The steps to deploy are as follows:
+
+1. Log into GitHub.
+2. Select `quiz-time` from the list of repositories.
+3. Select `Settings` From the Repositories sub-headings.
+4. In the left side menu select `Pages` from `Code and automation` section.
+5. Under the `Source` heading in the dropdown menu select `main`.
+6. A second drop-down menu should remain with the default value `/(root)`.
+7. Press `Save`.
+8. A message that the website is ready to be deployed will appear, refresh the page and the link to the deployed site will be available in a green sub-section on the top of the page.
+9. Click on the link to go to the live deployed page.
+
+The live link can be found [here](https://oks-erm.github.io/quiz-time).
+
+## How to run this project Locally
+
+- **Clone the repository**
+1. Navigate to the GitHub Repository `oks-erm/quiz-time`.
+2. Click the `Code` drop-down menu.
+3. Click the `HTTPS` sub-heading under the `Clone` heading.
+4. Copy the link.
+5. Open an IDE of your choice (VSCode, Atom, Komodo, etc).
+6. Open a terminal in the directory of your choice, type `git clone` and paste the link.
+7. A clone of the repository will now be created on your machine.
+
+- **Download the repository manually**
+1. Navigate to the GitHub Repository `oks-erm/quiz-time`.
+2. Click the `Code` drop-down menu.
+3. Click `Download ZIP`.
+4. Locate the ZIP file and extract it to a folder where you want the repository to be stored. 
+5. Open an IDE of your choice (VSCode, Atom, Komodo, etc).
+6. Navigate to the directory where the repository was extracted.
+7. Now you will have the contents of the project available offline on your machine.
+___
