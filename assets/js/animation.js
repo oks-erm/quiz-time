@@ -1,4 +1,5 @@
 let coordinates;
+const score = document.getElementById('score');
 
 // Burst of particles for score incrementation
 export function burst() {
