@@ -158,7 +158,7 @@
     grid-template-rows: 1fr 20px 5px repeat(7, 11.5%) 5px 20px 1fr;
     grid-template-columns: 1fr 20px 5px repeat(6, 210px) 5px 20px 1fr;
     height: 100vh;
-    background: url(../images/wallbg2.webp) no-repeat center center;
+    background: url(../images/wallbg.webp) no-repeat center center;
     background-size: cover;
   }
   
@@ -379,7 +379,7 @@ table {
 /* ---------------- Fun Fact page */
 
 #funfact {
-  background: url(../images/wallbg2.webp) no-repeat center center;
+  background: url(../images/wallbg.webp) no-repeat center center;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -578,6 +578,10 @@ table {
   padding: 0.4em 2em;
   margin: 1.5em 0.5em;
   width: 350px;
+}
+
+.error #logo-orientation {
+opacity: 0.5;
 }
 
 
