@@ -14,7 +14,7 @@ export function openModal(scoresData) {
     if (playAgain.getAttribute('data-listener') !== 'true') {
         playAgain.addEventListener('click', (e) => window.location.assign('funfact.html'));
         playAgain.setAttribute('data-listener', 'true');
-    };
+    }
     // confetti animation
     confettiBurst();
 }
@@ -24,12 +24,12 @@ export function buildTable(array) {
     sortScores(array);
     let top = array.slice(0, 8);
     for (let object of top) {
-        let row = document.createElement('tr')
+        let row = document.createElement('tr');
         row.innerHTML = `
                     <td>${object.Score}</td>
                     <td>${object.Name}</td>
                     <td>${object.Date}</td>
-                   `
+                   `;
         tbody.append(row);
     }
 }
