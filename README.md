@@ -179,13 +179,15 @@ The question area is the main area of the game. On the top there are the Current
 
 ![Highscores](assets/images/readme/highscores.png)
 
-In the end of the game the highscores modal window appears. It displays the player's current result and top 8 results for all the history of the game. At the bottom of the window there is a button "Play again".
+In the end of the game the highscores modal window appears. It displays the player's current result and top 8 results for all the history of the game. The results are stored at Google Spreadsheets and the app written by me processes requests: allows to access and write data. At the bottom of the window there is a button "Play again".
 
 - **Funfact Page**
 
 ![Funfact](assets/images/readme/funfact.png)
 
-This page is a secret page which appears after the game when the user clicks "Play again". It has a different layout and does not have the logo on it to make it standout from the main game flow and at the same time maintain the atmosphere of secrecy, somewhat like a secret mode with a limited access. The absense of the logo will not compromise the website navigation, because one of the buttons below the fact takes the user to the home page anyway. It is intended to be a reward after the game and there is no other way to get to this page. It displays a random fun fact from the API, facts are brief and interesting, I believe everyone who loves quizes would appreciate this little treat. This page offers the user possible scenarious: play again (navigates to the difficulty section) or change name (if the user decides to contribute to the fun names collection) and play again (navigates to the home page).
+This page is a secret page which appears after the game when the user clicks "Play again". It has a different layout and does not have the logo on it to make it standout from the main game flow and at the same time maintain the atmosphere of secrecy, somewhat like a secret mode with a limited access. The absense of the logo will not compromise the website navigation, because one of the buttons below the fact takes the user to the home page anyway.
+
+It is intended to be a reward after the game and there is no other way to get to this page. It displays a random fun fact from the API, facts are brief and interesting, I believe everyone who loves quizes would appreciate this little treat. This page offers the user possible scenarious: play again (navigates to the difficulty section) or change name (if the user decides to contribute to the fun names collection) and play again (navigates to the home page).
 
 - **Error Pages**
 

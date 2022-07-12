@@ -179,7 +179,7 @@
     grid-area: 6/4/9/11;
     width: 400px;
     height: 250px;
-    background-color: rgb(172 211 239 / 90%);
+    background-color: rgba(203, 229, 247, 0.9);
     padding: 5%;
     align-self: center;
     justify-self: center;
