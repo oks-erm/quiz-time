@@ -456,3 +456,10 @@ Mobile
 Desktop
 
 ![Desktop Home](assets/images/readme/testing/404.png)
+
+## Accessibility Testing
+
+### Screen Reader for Goggle Chrome
+
+The website was tested with [Screen Reader for Goggle Chrome](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en). No issues arose. 
+
