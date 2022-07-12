@@ -39,7 +39,7 @@
     grid-area: 4/4/7/10;
     align-self: center;
     font-size: 4.5rem;
-    font-family: Nothing You Could Do, sans-serif;
+    font-family: 'Nothing You Could Do', sans-serif;
     color: rgba(247, 230, 247, 0.9);
     font-weight: 400;
     text-align: center;
@@ -130,7 +130,7 @@
   #play-again,
   #change-name,
   .error button {
-    font-family: Nothing You Could Do, sans-serif;
+    font-family: 'Nothing You Could Do', sans-serif;
     color: rgba(247, 230, 247, 0.9);
     font-weight: 400;
     text-align: center;
@@ -318,13 +318,13 @@
   background-color: rgb(159, 235, 159);
 }
 
-.incorrect {
-  background-color: rgb(231 170 194);
+.fade {
+  color: rgba(99, 99, 107, 0.5);
+  background-color: rgba(186, 210, 230, 0.95);
 }
 
-.fade {
-  color: rgba(99, 99, 107, .4);
-  background-color: rgba (180, 180, 205, .5);
+.incorrect {
+  background-color: rgb(231 170 194);
 }
 
 .hide {

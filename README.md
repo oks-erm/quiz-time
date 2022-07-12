@@ -313,11 +313,27 @@ ___
 
 ## Manual Testing
 
-Design was tested manually in three browsers: Chrome, Firefox and Safari on Desktops, tablets and multiple mobile devices (macOS and Android).
+Design was tested manually in three browsers: 
+- Chrome, 
+- Firefox
+- Safari 
+
+on multiple devices: 
+- mobile devices
+    - iPhone 12,
+    - iPhone XR,
+    - Samsung Galaxy S20
+- tablets
+    - iPad Air
+- laptops
+    - MacBook Air 13',
+    - MacBook Pro 16',
+    +  +desktop screen 24'
+
 Certain minor differences were detected, but no issues affecting the overall performance.
 
 ### Bugs detected:
-For one of the Android devices the website was flickering with all the screen instead of css animation. I was not able to approach it, bacause I was not able to replicate it on my devices.
+For one of the Android devices the website was flickering with all the screen instead of css animation. I was not able to approach it, because I was not able to replicate it on my devices.
 
 ## Feature Testing
 
@@ -340,7 +356,13 @@ All pages were run through HTML Validator. No errors were detected.
 
 CSS Stylesheet was run through CSS Validator. No errors were detected.
 
-3. **[Google Lighthouse](https://developers.google.com/web/tools/lighthouse)**
+Warning: auto is not defined by any specification as an allowed value for pointer-events, but is supported in multiple browsers.
+
+3. **[JS Hint](https://jshint.com/)**
+
+
+
+4. **[Google Lighthouse](https://developers.google.com/web/tools/lighthouse)**
 
 **Home Page**
 
