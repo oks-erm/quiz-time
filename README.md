@@ -25,10 +25,9 @@ ___
 ### As a **returning** and a **frequent user**
 
 - I want to have different questions without repetitions.
-- I want to have a choice of difficulty to progress.
+- I want to have a choice of difficulty to be able to progress.
 - I want to play multiple games.
-- I want to compare my results with other players.
-- I want to read funny nicknames of other players and create my own. 
+- I want to compare my results with other players to see how I am performing.
 
 ### All users want to be able to access and comfortably view the website on mobile devices.
 
@@ -207,10 +206,51 @@ The site is designed to be flexible, fluid, responsive and aesthetically enjoyab
 
 ![Orientation](assets/images/readme/orientation.png)
 
-The choice of breakpoints was based on different aspects, such as typical devices' screen sizes and the intention to provide the best possible presentation of the content for all screen sizes. 768px breakpoint is meant to hit the iPad mini; 992px is quite common to signify the transition to laptops, and, content-wise, it proved to be reasonable. 1446px is not a typical choice, but it was preferred based on the content layout. 
+The choice of breakpoints was based on different aspects, such as typical devices' screen sizes and the intention to provide the best possible presentation of the content for all screen sizes. 768px breakpoint is meant to hit the iPad mini; 992px is quite common to signify the transition to laptops, and, content-wise, it proved to be reasonable. 1446px is not a typical choice, but it was preferred based on the content layout. The way I see quiz games, they are supposed to be played on bigger screens, as it is easier to read, possibly with a group of people.
 
 The main game frame is based Grid, with Flex used for the content inside the grid, what allows the website to expand and shrink responsively to a device screen size providing each page's design integrity. Elements must maintain their respective position (or change if intended for better user experience), they do not overlap or misalign, and the content does not overflow. 
 
 ## Feature Considerations
 
+### Miltiplayer
+
+### Select the ammount of questions
+
+### Statistics of correct answers for each question
+It could be interesting to keep track of statistics for each question, such as how many people answered it and the percentage of correct answers.
+
+### Easter eggs
+I personally enjoy unexpected and fun featured so I would like to come up with something that would be entertaining without breaking the flow of the game.
+
+___
+
+# Technologies
+## Languages
+- HTML, CSS, JavaScript
+## Programs, frameworks, libraries
+- [Gitpod](https://gitpod.io/) IDE to develop the website.
+- [GitHub](https://GitHub.com/) to host the source code and GitHub Pages to deploy and host the live site.
+- Git to provide version control (to commit and push code to the repository). 
+- [Google Spreadsheets API](https://developers.google.com/sheets/api) to store scores data.
+- [Google Apps Script](https://developers.google.com/apps-script) to write an app to process requests to Spreadsheets.
+- [jQuery](https://jquery.com/)(JS library) for additional functionality.
+- [Confetti](https://www.npmjs.com/package/canvas-confetti)(JS library) to create a burst of confetti animation. 
+- [Mo JS](https://mojs.github.io/)(JS library) to create particles animation.
+- [Google Fonts](https://fonts.google.com/) for typography.
+- [Google Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools) for debugging, inspecting pages' elements and testing layout.
+- [Open Trivia DataBase](https://opentdb.com/) - API used for the trivia questions.
+- [Random Fact Database](https://uselessfacts.jsph.pl/) - API used for the facts for the Fun Fact page.
+- [TinyJPG](https://tinyjpg.com/) to optimise images for readme. 
+- [Favicon.io](https://www.favicon.io/) to create the website favicon.
+- [Coolors](https://coolors.co/image-picker) to source colour palette from image.
+- [Balsamiq](https://balsamiq.com/wireframes/) to design wireframes.
+- [Techsini](https://tecnisih.com) to create the Mockup image in this README.
+- Google Chrome's [Lighthouse](https://developers.google.com/web/tools/lighthouse) to assess accessibility.
+- [Screen Reader for Google Chrome](https://chrome.google.com/webstore/detail/screen-reader-for-google/nddfhonnmhcldcbmhbdldfpkbfpgjoeh/related?hl=en) to assess screen-reader accessibility.
+- [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) to view the site as people with accessibility needs would see it.
+- Toptal [Colorfilter](https://www.toptal.com/designers/colorfilter/) to assess colour-blind accessibility.
+- [W3C HTML Markup Validator](https://validator.w3.org/) to validate HTML code.
+- [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) to validate CSS code.
+- [Markdown Tables Generator](https://www.tablesgenerator.com/) to generate tables for the readme file.
+- Code Institute's Gitpod Template to generate the workspace for the project.
 ___
