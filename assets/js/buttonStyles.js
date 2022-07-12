@@ -28,10 +28,10 @@ export function buttonStylesChoiceWrong(selectedAnswer, optionButtons) {
             // add styling for incorrect
         } else if (answer === selectedAnswer) {
             answer.classList.add('white-glow', 'fade', 'incorrect');
-            answer.classList.remove('pink-glow')
+            answer.classList.remove('pink-glow');
         } else {
             answer.classList.add('white-glow', 'fade');
-            answer.classList.remove('pink-glow')
+            answer.classList.remove('pink-glow');
         }
     }
 }
@@ -45,5 +45,5 @@ export function buttonsBeforeQuestion(optionButtons) {
         option.classList.add('pink-glow');
     }
     // remove answers from previous round
-    [answer1.innerText, answer2.innerText, answer3.innerText, answer4.innerText] = ['A.', 'B.', 'C.', 'D.']
+    [answer1.innerText, answer2.innerText, answer3.innerText, answer4.innerText] = ['A.', 'B.', 'C.', 'D.'];
 }
