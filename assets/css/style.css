@@ -572,12 +572,21 @@ table {
   height: 100vh;
 }
 
+.error h1 {
+  font-family: 'gods_own_junkyardregular', sans-serif;
+}
+
+.error h2{
+  font-size: 1.3em;
+  width: 90%;
+}
+
 .error button {
   background: var(--dark-blue);
-  color: var(--white);
-  padding: 0.4em 2em;
-  margin: 1.5em 0.5em;
+  padding: 0.3em 2em;
   width: 350px;
+  margin: 0.3em;
+  display: block;
 }
 
 .error #logo-orientation {
