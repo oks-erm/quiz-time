@@ -36,7 +36,6 @@ describe('writeData()', () => {
 
     it('should write an item from facts array into the paragraph', () => {
         const fact = 'Test';
-
         writeData(fact);
         const parAfter = document.getElementById('funfact-text').innerHTML;
 
@@ -46,7 +45,6 @@ describe('writeData()', () => {
 
     it('should display backup fact if api call fails', () => {
         const fact = '';
-
         writeData(fact);
         const parAfter = document.getElementById('funfact-text').innerHTML;
 

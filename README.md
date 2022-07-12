@@ -240,6 +240,7 @@ ___
 - [Google Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools) for debugging, inspecting pages' elements and testing layout.
 - [Open Trivia DataBase](https://opentdb.com/) - API used for the trivia questions.
 - [Random Fact Database](https://uselessfacts.jsph.pl/) - API used for the facts for the Fun Fact page.
+- [Vitest](https://vitest.dev/) for unit testing.
 - [TinyJPG](https://tinyjpg.com/) to optimise images for readme. 
 - [Favicon.io](https://www.favicon.io/) to create the website favicon.
 - [Coolors](https://coolors.co/image-picker) to source colour palette from image.
@@ -309,3 +310,98 @@ ___
 | I want to compare my results with other<br>players to see how I am performing.   | 1. The Highscores modal displays the player's current result,<br>so the player can compare their result with the top scores.<br><br>2. The user can see results of all the games ever played<br>so they are motivated to play again <br>to get into the top or beat the high score.                                                                                                                                                                                                                               |
 | **All users:**                                                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | All users want to be able to access and comfortably <br>view the website on mobile devices.            | 1. The website is fully responsive on all screen sizes and <br>resolutions starting from 375px.<br><br>2. The mobile version has different layout<br>to ensure that mobile users receive quality<br>experience.                                                                                |
+
+## Manual Testing
+
+Design was tested manually in three browsers: Chrome, Firefox and Safari on Desktops, tablets and multiple mobile devices (macOS and Android).
+Certain minor differences were detected, but no issues affecting the overall performance.
+
+### Bugs detected:
+For one of the Android devices the website was flickering with all the screen instead of css animation. I was not able to approach it, bacause I was not able to replicate it on my devices.
+
+## Feature Testing
+
+Feature testing was performed through automated unit testing using Vitest.
+To run the tests: install dependencies (`npm install`) and use a command `npm test` in terminal. 
+
+Find the screenshots below:
+
+![test1](assets/images/readme/testing/unit-test1.png)
+![test2](assets/images/readme/testing/unit-test2.png)
+![test3](assets/images/readme/testing/unit-test3.png)
+
+## Automated Testing
+
+1. **[W3 Markup Validation](https://validator.w3.org/) - HTML Validation**
+
+All pages were run through HTML Validator. No errors were detected.
+
+2. **[W3 Jigsaw](https://jigsaw.w3.org/css-validator/) - CSS Validation**
+
+CSS Stylesheet was run through CSS Validator. No errors were detected.
+
+3. **[Google Lighthouse](https://developers.google.com/web/tools/lighthouse)**
+
+**Home Page**
+
+Mobile
+
+![Mobile Home](assets/images/readme/lighth-home-mobile.png)
+
+Desktop
+
+![Desktop Home](assets/images/readme/lighth-home-desktop.png)
+
+**Philosofy Page**
+
+Mobile
+
+![Mobile Ph](assets/images/readme/lighth-phil-mobile.png)
+
+Desktop
+
+![Desktop Ph](assets/images/readme/lighth-phil-desktop.png)
+
+**Meetups Page**
+
+Mobile
+
+![Mobile Meetups](assets/images/readme/lighth-meetups-mobile.png)
+
+Desktop
+
+![Desktop Meetups](assets/images/readme/lighth-meetups-desktop.png)
+
+**Signup Page**
+
+Mobile
+
+![Mobile Signup](assets/images/readme/lighth-signup-mobile.png)
+
+Desktop
+
+![Desktop Signup](assets/images/readme/lighth-signup-desktop.png)
+
+## Accessibility Testing
+
+### Screen Reader for Goggle Chrome
+
+The website was tested with [Screen Reader for Goggle Chrome](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en). No issues arose. 
+
+### Toptal Colorfilter
+
+The website was tested with Toptal [Colorfilter](https://www.toptal.com/designers/colorfilter/) to make sure it is accessible for colour-blind users. No accessibility issues were detected.
+
+[Result preview 1](https://www.toptal.com/designers/colorfilter?orig_uri=https://oks-erm.github.io/sofing/index.html&process_type=protan)
+
+[Result preview 2](https://www.toptal.com/designers/colorfilter?orig_uri=https://oks-erm.github.io/sofing/index.html&process_type=deutan)
+
+[Result preview 3](https://www.toptal.com/designers/colorfilter?orig_uri=https://oks-erm.github.io/sofing/index.html&process_type=tritan)
+
+[Result preview 4](https://www.toptal.com/designers/colorfilter?orig_uri=https://oks-erm.github.io/sofing/index.html&process_type=grey)
+
+However, a layout bug was found, which did not appear at any other stage.
+
+![Bug](assets/images/readme/button-bug.png)
+
+## Detected Issues and Resolutions

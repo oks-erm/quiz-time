@@ -73,11 +73,13 @@ vi.mock('../scoresapi', () => vi.fn());
 describe('setScores()', () => {
     it('should assign received data to scoresData and return it', async() => {
         const scoresData = await setScores();
+        
         expect(scoresData).toBe(testScoresData);
     })
 
     it('should set top score element to the highest score in the array', () => {
-        const topScore = document.getElementById('top-score').innerText
+        const topScore = document.getElementById('top-score').innerText;
+
         return expect(parseInt(topScore)).toBe(testScoresData[0].Score);
     })
 })
@@ -85,6 +87,7 @@ describe('setScores()', () => {
 describe('sortScores()', () => {
     sortScores(testScoresData);
     it('should sort scores in descending order', () => {
+
         expect(testScoresData[0].Score).toBe(10);
         expect(testScoresData[0].Score > testScoresData[1].Score).toBe(true);
     })
@@ -103,6 +106,7 @@ describe('handleScores()', () => {
     it('should push current result to scoresData', async() => {
         const testScoresData = await setScores();
         handleScores(testScore, testName, testDate);
+
         expect(testScoresData[testScoresData.length-1].Score).toBe(testScore);
     })
 })

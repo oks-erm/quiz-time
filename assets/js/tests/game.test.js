@@ -208,9 +208,11 @@ describe('setApiAddress()', () => {
     it('should set apiAddress to easyLevel when difficulty "easy" is passed', () => {
         expect(result1).toBe(easyLevel);
     });
+    
     it('should set apiAddress to mediumLevel when difficulty "medium" is passed', () => {
         expect(result2).toBe(mediumLevel);
     });
+
     it('should set apiAddress to expertLevel when anything but "easy" and "medium" is passed', () => {
         expect(result3).toBe(expertLevel);
     })
@@ -225,6 +227,7 @@ describe('difficultyToGame()', () => {
     it('should hide difficulty section', () => {
         expect(difficultyArea.classList.contains('hide')).toBe(true);
     });
+
     it('should display game area', () => {
         expect(gameArea.classList.contains('hide')).toBe(false);
     })
@@ -263,7 +266,7 @@ describe('shuffle()', () => {
     it('should shuffle items in the array', () => {
         const testArray = [1, 2, 3, 4, 5];
         const result = shuffle(testArray);
-        console.log(result);
+
         expect(result).not.toEqual([5, 4, 3, 2, 1]);
         expect(result).not.toEqual([1, 2, 3, 4, 5]);
     })
@@ -318,12 +321,15 @@ describe('prepareAnswers()', () => {
     it('should define correctAnswer', () => {
         expect(correctAnswer).toBe(testQuestion.correct_answer);
     })
+
     it('should create an array of incorrect answers and the correct answer', () => {
         expect(answers.length == 4).toBe(true);
     })
+
     it('should assign value to correctIndex', () => {
         expect(correctIndex).not.toBe(null);
     })
+
     it('should assign "data-index" attribute to a button from optionButtons', () => {
         expect(optionButtons[correctIndex].hasAttribute('data-index')).toBe(true);
     })
@@ -333,14 +339,17 @@ describe('setAnswers()', () => {
     const optionButtons = document.getElementsByClassName('answer');
     const answers = ['answer1', 'answer2', 'answer3', 'answer4'];
     setAnswers(answers);
+
     it('should make an array of optionButtons', () => {
         expect(options.length).toBe(4);
     })
+
     it('should assign answers to answer buttons', () => {
         for (let i = 0; i < options.length; i++) {
             expect(options[i].innerHTML.includes(answers[i])).toBe(true);
         }
     })
+
     it.each(optionButtons)('should set data-listener on difficulty buttons to true', (button) => {
         expect(button.getAttribute('data-listener')).toBe('true');
     })
@@ -396,16 +405,19 @@ describe('getQuestion()', () => {
 
     it('should display question count', () => {
         getQuestion();
+
         expect(questionCount.innerText.length > 0).toBe(true);
     });
 
     it('should display question', () => {
         getQuestion();
+
         expect(question.innerText.length > 0).toBe(true);
     });
 
     it('should define currentQuestion', () => {
         getQuestion();
+
         expect(currentQuestion).toBeDefined;
     });
 
@@ -417,6 +429,7 @@ describe('getQuestion()', () => {
         const n1 = n;
         getQuestion();
         const n2 = n;
+
         expect(n1).not.toBe(n2);
     });
 
@@ -424,6 +437,7 @@ describe('getQuestion()', () => {
         for (let x = 0; x <= 16; x++) {
             getQuestion();
         }
+
         expect(game.classList.contains('hide')).toBe(true);
     })
 

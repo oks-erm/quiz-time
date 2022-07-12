@@ -38,14 +38,13 @@ describe('validateInput()', () => {
 
     it('should display an alert box if spaces are provided as a value', () => {
         const testInput = '     ';
-
         validateInput(testInput);
+
         expect(global.alert).toBeCalled();
     });
 
     it('should store the valid input value to a session storage', () => {
         const testInput = 'Test';
-
         validateInput(testInput);
 
         expect(sessionStorage.getItem('userName')).toEqual(testInput);
@@ -53,7 +52,6 @@ describe('validateInput()', () => {
 
     it('should navigate to another page', () => {
         const testInput = 'Test';
-
         validateInput(testInput);
 
         expect(global.location.assign).toBeCalled();
