@@ -356,7 +356,7 @@ All pages were run through HTML Validator. No errors were detected.
 
 CSS Stylesheet was run through CSS Validator. No errors were detected.
 
-Warning: auto is not defined by any specification as an allowed value for pointer-events, but is supported in multiple browsers.
+Warning: `auto` is not defined by any specification as an allowed value for `pointer-events`, but is supported in multiple browsers.
 
 3. **[JS Hint](https://jshint.com/)**
 

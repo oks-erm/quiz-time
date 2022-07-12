@@ -22,9 +22,9 @@ export function burst() {
     document.addEventListener('DOMSubtreeModified', (e) => {
         if (e.target === score) {
             burst.play();
-        };
-    })
-};
+        }
+    });
+}
 
 export function confettiBurst() {
     confetti({
