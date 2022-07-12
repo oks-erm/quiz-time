@@ -360,70 +360,45 @@ Warning: `auto` is not defined by any specification as an allowed value for `poi
 
 3. **[JS Hint](https://jshint.com/)**
 
+All pages were run through JS Hint. No errors were detected.
 
+animation.js
 
-4. **[Google Lighthouse](https://developers.google.com/web/tools/lighthouse)**
+![metrics](assets/images/readme/testing/metrics-animation.png)
 
-**Home Page**
+buttonStyles.js
 
-Mobile
+![metrics1](assets/images/readme/testing/metrics-buttons.png)
 
-![Mobile Home](assets/images/readme/lighth-home-mobile.png)
+funfact.js
 
-Desktop
+![metrics2](assets/images/readme/testing/metrics-funfact.png)
 
-![Desktop Home](assets/images/readme/lighth-home-desktop.png)
+game.js
 
-**Philosofy Page**
+![metrics3](assets/images/readme/testing/metrics-game.png)
 
-Mobile
+gatfact.js
 
-![Mobile Ph](assets/images/readme/lighth-phil-mobile.png)
+![metrics4](assets/images/readme/testing/metrics-getfact.png)
 
-Desktop
+home.js
 
-![Desktop Ph](assets/images/readme/lighth-phil-desktop.png)
+![metrics5](assets/images/readme/testing/metrics-home.png)
 
-**Meetups Page**
+modal.js
 
-Mobile
+![metrics6](assets/images/readme/testing/metrics-modal.png)
 
-![Mobile Meetups](assets/images/readme/lighth-meetups-mobile.png)
+preset.js
 
-Desktop
+![metrics7](assets/images/readme/testing/metrics-preset.png)
 
-![Desktop Meetups](assets/images/readme/lighth-meetups-desktop.png)
+scores.js
 
-**Signup Page**
+![metrics8](assets/images/readme/testing/metrics-scores.png)
 
-Mobile
+scoresapi.js
 
-![Mobile Signup](assets/images/readme/lighth-signup-mobile.png)
+![metrics9](assets/images/readme/testing/metrics-scoresapi.png)
 
-Desktop
-
-![Desktop Signup](assets/images/readme/lighth-signup-desktop.png)
-
-## Accessibility Testing
-
-### Screen Reader for Goggle Chrome
-
-The website was tested with [Screen Reader for Goggle Chrome](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en). No issues arose. 
-
-### Toptal Colorfilter
-
-The website was tested with Toptal [Colorfilter](https://www.toptal.com/designers/colorfilter/) to make sure it is accessible for colour-blind users. No accessibility issues were detected.
-
-[Result preview 1](https://www.toptal.com/designers/colorfilter?orig_uri=https://oks-erm.github.io/sofing/index.html&process_type=protan)
-
-[Result preview 2](https://www.toptal.com/designers/colorfilter?orig_uri=https://oks-erm.github.io/sofing/index.html&process_type=deutan)
-
-[Result preview 3](https://www.toptal.com/designers/colorfilter?orig_uri=https://oks-erm.github.io/sofing/index.html&process_type=tritan)
-
-[Result preview 4](https://www.toptal.com/designers/colorfilter?orig_uri=https://oks-erm.github.io/sofing/index.html&process_type=grey)
-
-However, a layout bug was found, which did not appear at any other stage.
-
-![Bug](assets/images/readme/button-bug.png)
-
-## Detected Issues and Resolutions
