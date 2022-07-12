@@ -159,7 +159,7 @@ ___
 
 ![Form](assets/images/readme/home.png)!
 
-The game starts with a simple home page, it invites the user to enter a name and start the game. A type of the game is clear from the name, so additional explanations are not needed. It includes the Logo (which is a link to the Home page). From any point of the website the user can go back to the Home page.
+The game starts with a simple home page, it consists of a heading and a form that invites the user to enter a name and start the game. A type of the game is clear from the name, so additional explanations are not needed. It includes the Logo (which is a link to the Home page). From any point of the website the user can navigate back to the Home page.
 
 - **Difficulty Area**
 
@@ -252,7 +252,6 @@ ___
 - Google Chrome's [Lighthouse](https://developers.google.com/web/tools/lighthouse) to assess accessibility.
 - [Screen Reader for Google Chrome](https://chrome.google.com/webstore/detail/screen-reader-for-google/nddfhonnmhcldcbmhbdldfpkbfpgjoeh/related?hl=en) to assess screen-reader accessibility.
 - [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) to view the site as people with accessibility needs would see it.
-- Toptal [Colorfilter](https://www.toptal.com/designers/colorfilter/) to assess colour-blind accessibility.
 - [W3C HTML Markup Validator](https://validator.w3.org/) to validate HTML code.
 - [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) to validate CSS code.
 - [Markdown Tables Generator](https://www.tablesgenerator.com/) to generate tables for the readme file.
@@ -463,3 +462,34 @@ Desktop
 
 The website was tested with [Screen Reader for Goggle Chrome](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en). No issues arose. 
 
+### Colourblind Accessibility 
+
+All the pages were tested with [color-blindnes.com](https://www.color-blindness.com/coblis-color-blindness-simulator/). I first attempted testing it with [Colorfilter](https://www.toptal.com/designers/colorfilter/) but I came across multiple complaints about it's ability to process css, the same is stated on the home page. It would display bugs that I was not able to replicate in any other environment. I searched similar cases and I found reports of the similar results. This way I decided to test screenshots and run them through all the modex of [color-blindnes.com](https://www.color-blindness.com/coblis-color-blindness-simulator/). No issues were detected.
+
+___
+
+# Credits
+
+## Media
+
+- wallbg.webp is by @littlehenrabi from [ShutterStock](https://shutterstock.com).
+- favicon.ico was created by me. 
+
+## Code
+
+- Code snippet for to fix 100vh bug for mobile devices is taken from [CSS Tricks](https://css-tricks.com/the-trick-to-viewport-units-on-mobile/).
+- Code snippet for cresting neon glowing animation is taken from [CSS Tricks](https://css-tricks.com/how-to-create-neon-text-with-css/) and modified.
+- Code snippet for sending data to google spreadsheet is taken from [here](https://stackoverflow.com/questions/52905556/send-data-to-google-spreadsheet) and modified.
+- Code snippet for turning google spreadsheets into a rest api is taken from [here](https://www.ravsam.in/blog/turning-a-google-sheet-into-a-rest-api/#:~:text=To%20access%20your%20Google%20Sheet,will%20handle%20the%20GET%20requests.&text=Once%20you%20are%20done%20with,Script%20as%20a%20Web%20App.) and modified.
+- Understanding of modal was obtained from [here](https://m.youtube.com/watch?v=OTFnJQCNC9g).
+- Guidance on JavaScript and common conventions were obtained from [W3Schools](https://www.w3schools.com/) and [Mozilla's Web Documentation](https://developer.mozilla.org/en-US/).
+- Understanding of ways to shuffle an array and code snippet is taken from [here](https://www.webmound.com/shuffle-javascript-array/).
+- Understanding of event listeners was obtained from [here](https://www.fwait.com/how-to-detect-which-button-is-clicked-in-javascript/).
+- Understanding of local storage was obtained from [here](https://lage.us/Javascript-Pass-Variables-to-Another-Page.html).
+- Knowledge of unit testing was obtained from [Udemy](https://www.udemy.com/course/javascript-unit-testing-the-practical-guide/).
+- Understanding of asynchronous functions was obtained from [freecodecamp.org](https://www.freecodecamp.org/news/asynchronous-javascript-explained/).
+
+## Acknowledgements
+
+I would like to thank wonderful tutors and my mentor, Ronan McClelland, for guidance, moral support and patience. 
+___
