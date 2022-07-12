@@ -164,7 +164,7 @@
   
   #logo {
     grid-area: 2/2/6/5;
-    background: url(../images/logo-big.png) no-repeat center center;
+    background: url(../images/logo-big.webp) no-repeat center center;
     background-size: contain;
     height: 180px;
     width: 300px;
@@ -530,7 +530,7 @@ table {
 /* ---------------- Orientation message */
 
 #orientation {
-  opacity: 1;
+  opacity: 0;
   pointer-events: auto;
   position: absolute;
   top: 0;
@@ -552,7 +552,7 @@ table {
 }
 
 #logo-orientation {
-  background: url(../images/logo-big.png) no-repeat center center;
+  background: url(../images/logo-big.webp) no-repeat center center;
   background-size: contain;
   height: 100px;
   width: 130px;
@@ -583,7 +583,6 @@ table {
 .error #logo-orientation {
 opacity: 0.5;
 }
-
 
 /* ---------------- Effects & Animation */
 
