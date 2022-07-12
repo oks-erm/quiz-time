@@ -153,3 +153,64 @@ When the score increments it is accompanied with a little burst of particles aro
 #### Cursor
 For all elements that can be clicked a custom cursor appears when being hovered over with the mouse.
 ___
+
+# Features
+## Existing Features
+- **Input Form (Home Page)**
+
+![Form](assets/images/readme/home.png)!
+
+The game starts with a simple home page, it invites the user to enter a name and start the game. A type of the game is clear from the name, so additional explanations are not needed. It includes the Logo (which is a link to the Home page). From any point of the website the user can go back to the Home page.
+
+- **Difficulty Area**
+
+![Difficulty](assets/images/readme/difficulty.png)
+
+This section is the first thing the user sees starting the game, it allows to choose difficulty level of the quiz. It maintaines the same layout and design as the Home Page.
+
+- **Question Area**
+
+![Question](assets/images/readme/question.png)
+
+The question area is the main area of the game. On the top there are the Current Score (which increments according to the difficulty) and the Top Score (that is fetched from the API that stores results of all the games ever played by all users). It displays 20 questions from the API according to the chosen difficulty. API includes thousands of questions, this way repetitions are very rear and the game is gripping and users might be tempted to play multiple games and return again. The user chooses the answer and receives a clear colour coded response if the answer is correct. The navigation is clear because the game is linear.
+
+![Answer](assets/images/readme/answer.png)
+
+- **Highscores Modal**
+
+![Highscores](assets/images/readme/highscores.png)
+
+In the end of the game the highscores modal window appears. It displays the player's current result and top 8 results for all the history of the game. At the bottom of the window there is a button "Play again".
+
+- **Funfact Page**
+
+![Funfact](assets/images/readme/funfact.png)
+
+This page is a secret page which appears after the game when the user clicks "Play again", it is intended to be a reward after the game and there is no way to get to this page. It displays a random fun fact from the API, facts are brief and interesting, I believe everyone who loves quizes would appreciate this little treat. This page offers the user possible scenarious: play again (navigates to the difficulty section) or change name (if the user decides to contribute to the fun names collection) and play again (navigates to the home page).
+
+- **Error Pages**
+
+![Error500](assets/images/readme/500.png)
+![Error404](assets/images/readme/404.png)
+
+Error pages inform the user that something went wrong without giving the impession that the user has left the website, they offer alternative scenarious keeping the user on the website.
+
+- **Loader**
+
+![Loader](assets/images/readme/loader.png)
+
+The loader signals to the user that something is happening.
+
+## Responsive layout
+
+The site is designed to be flexible, fluid, responsive and aesthetically enjoyable on all screen sizes and resolutions starting from 375px (based on [statistics for 2022](https://worship.agency/wp-content/uploads/2022/01/mobile-screen-sizes-2022.png)). To ensure better visual experience on mobile devices, the neon frame is turned off for the mobile version. To provide better user experince the landscape orientation for mobile devices was disabled - if the user attempts rotating a device, the game displays a message and offers to rotate the device back to continue the game. This feature was implemented because in the landscape orientation it was not possible to fit all elements of the game into one screen and it included a lot of unnecessary scrolling. 
+
+![Orientation](assets/images/readme/orientation.png)
+
+The choice of breakpoints was based on different aspects, such as typical devices' screen sizes and the intention to provide the best possible presentation of the content for all screen sizes. 768px breakpoint is meant to hit the iPad mini; 992px is quite common to signify the transition to laptops, and, content-wise, it proved to be reasonable. 1446px is not a typical choice, but it was preferred based on the content layout. 
+
+The main game frame is based Grid, with Flex used for the content inside the grid, what allows the website to expand and shrink responsively to a device screen size providing each page's design integrity. Elements must maintain their respective position (or change if intended for better user experience), they do not overlap or misalign, and the content does not overflow. 
+
+## Feature Considerations
+
+___
