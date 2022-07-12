@@ -149,7 +149,7 @@ export function incrementScore(difficulty) {
     } else if (difficulty === 'medium') {
         currentScore += 20;
     } else {
-        currentScore += 30
+        currentScore += 30;
     }
     score.innerText = currentScore;
 }
@@ -165,7 +165,7 @@ export function checkAnswer(e) {
     if (next.getAttribute('data-listener') !== 'true') {
         next.addEventListener('click', nextQuestion);
         next.setAttribute('data-listener', 'true');
-    };
+    }
 
     selectedAnswer = e.target;
     // check if a selected element has attribute data-index
@@ -192,7 +192,7 @@ function nextQuestion() {
 $(window).on("load", function () {
     $(".loader-wrapper").fadeOut("slow");
     setDifficulty();
-})
+});
 
 // get the viewport height and multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
