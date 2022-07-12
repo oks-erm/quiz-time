@@ -113,7 +113,7 @@
 
 #sbmt {
     padding: 0.8em;
-    width: 100%;
+    width: 90%;
     background-color: #f9e2fb;
     border: 1px solid #c3c7cd;
     border-radius: 15px;
@@ -177,10 +177,6 @@
 
 #content-box {
     grid-area: 6/4/9/11;
-    width: 400px;
-    height: 250px;
-    background-color: rgba(203, 229, 247, 0.9);
-    padding: 5%;
     align-self: center;
     justify-self: center;
     justify-content: center;
@@ -189,7 +185,11 @@
   }
   
   form {
-    width: 100%;
+    /* width: 100%; */
+    width: 400px;
+    height: 250px;
+    background-color: rgba(203, 229, 247, 0.9);
+    padding: 5%;
     color: var(--dark);
     display: flex;
     flex-direction: column;
@@ -201,7 +201,7 @@
   input {
     padding: 1em;
     margin: 1em 0;
-    width: 100%;
+    width: 90%;
     border-radius: 15px;
     background-color: #f0f8ff;
     box-shadow: 0px 0px 8px 3px rgb(132 152 197 / 50%),
