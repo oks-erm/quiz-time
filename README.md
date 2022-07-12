@@ -411,8 +411,48 @@ scoresapi.js
 
 Mobile
 
-![Mobile Home](assets/images/readme/lighth-home-mobile.png)
+![Mobile Home](assets/images/readme/testing/home-mob.png)
 
 Desktop
 
-![Desktop Home](assets/images/readme/lighth-home-desktop.png)
+![Desktop Home](assets/images/readme/testing/home.png)
+
+**Game Page**
+
+Mobile
+
+![Mobile Home](assets/images/readme/testing/game-mob.png)
+
+Desktop
+
+![Desktop Home](assets/images/readme/testing/game.png)
+
+**Funfact Page**
+
+Mobile
+
+![Mobile Home](assets/images/readme/testing/funfact-mob.png)
+
+Desktop
+
+![Desktop Home](assets/images/readme/testing/funfact.png)
+
+**500 Error**
+
+Mobile
+
+![Mobile Home](assets/images/readme/testing/500-mob.png)
+
+Desktop
+
+![Desktop Home](assets/images/readme/testing/500.png)
+
+**404 Error**
+
+Mobile
+
+![Mobile Home](assets/images/readme/testing/404-mob.png)
+
+Desktop
+
+![Desktop Home](assets/images/readme/testing/404.png)
