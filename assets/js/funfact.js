@@ -21,12 +21,12 @@ export function setEventListeners() {
     // navigate to the home page when clicked
     changeName.addEventListener('click', () => window.location.assign('index.html'));
     changeName.setAttribute('data-listener', 'true');
-  };
+  }
   if (playAgain.getAttribute('data-listener') !== 'true') {
     // navigate to the game page when clicked
     playAgain.addEventListener('click', () => window.location.assign('game.html'));
     playAgain.setAttribute('data-listener', 'true');
-  };
+  }
 }
 
 // fade the loader when getData function is completed
@@ -45,4 +45,4 @@ $.when(getData()).done(function () {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
 // (c) https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
-})
+});
