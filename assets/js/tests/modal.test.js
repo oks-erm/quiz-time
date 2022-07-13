@@ -64,10 +64,6 @@ describe('highScores()', () => {
     it('should call confettiBurst()', () => {
         expect(confettiBurst).toBeCalled();
     })
-
-    it('should call sortScores()', () => {
-        expect(sortScores).toBeCalled();
-    })
 })
 
 describe('buildTable()', () => {

@@ -17,7 +17,6 @@ document.write(htmlDocumentContent);
 global.$ = require('jquery')(window);
 global.$ = require('jquery');
 
-global.alert = vi.fn();
 global.location.assign = vi.fn();
 
 import {
