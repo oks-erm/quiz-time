@@ -1,5 +1,5 @@
 import { buttonStylesChoiceCorrect, buttonStylesChoiceWrong, buttonsBeforeQuestion } from './buttonStyles.js';
-import { openModal } from './modal.js';
+import { highScores, openModal } from './modal.js';
 import { handleScores, scoresData } from './scores.js';
 import { gamePreset } from './preset.js';
 
@@ -111,7 +111,8 @@ export function getQuestion() {
         handleScores(currentScore, userName, utc);
         // hide the game area, open the modal with highscores
         game.classList.add('hide');
-        openModal(scoresData);
+        openModal();
+        highScores(scoresData);
         yourScore.innerText = `Well done, ${userName}! You've scored` + ' ' + currentScore + '.';
     }
 }

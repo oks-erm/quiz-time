@@ -1,10 +1,18 @@
+import { closeModal, openModal } from './modal.js';
+
 let input;
 const form = window.document.querySelector('form');
+const modal = document.getElementById('modal-wrapper');
+const close = document.getElementById('close');
 
 export function validateInput(input) {
     // Make sure there is input and it's not spaces only
     if (!input || input.trim().length === 0) {
-        window.alert('Please, enter name to play!');
+        openModal();
+        if (close.getAttribute('data-listener') !== "true") {
+            close.addEventListener('click', closeModal);
+            close.setAttribute('data-listener', 'true');
+        }
     } else {
         //Stores user name to access it later
         sessionStorage.setItem('userName', input);

@@ -6,9 +6,17 @@ const playAgain = document.getElementById('play-again');
 const tbody = document.getElementsByTagName('tbody')[0];
 
 // Open modal
-export function openModal(scoresData) {
+export function openModal() {
     // show modal
     modal.classList.add('show');
+}
+
+export function closeModal() {
+    // show modal
+    modal.classList.remove('show');
+}
+
+export function highScores(scoresData) {
     buildTable(scoresData);
     //set event listener to the Play again button
     if (playAgain.getAttribute('data-listener') !== 'true') {

@@ -111,7 +111,7 @@
   
 /* ---------------- Buttons */
 
-#sbmt {
+.form-button {
     padding: 0.8em;
     width: 90%;
     background-color: #f9e2fb;
@@ -330,7 +330,7 @@
   display: none !important;
 }
 
-/* ---------------- Modal */
+/* ---------------- Modals */
 
 #modal-wrapper.show {
   opacity: 1;
@@ -359,6 +359,24 @@
   width: 70vw;
   max-width: 100%;
   border-radius: 1em;
+  padding: 1em;
+}
+
+#modal-alert {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  width: 30vw;
+  max-width: 100%;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+#modal-alert button {
+  width: 70%;
+  margin:0.5em;
+}
+
+#modal-alert p {
   padding: 1em;
 }
 
@@ -701,7 +719,7 @@ button:hover,
   cursor: url('../images/cursor.png'), auto;
 }
 
-#sbmt:hover {
+.form-button:hover {
   background-color: #efc8fb;
 }
 
@@ -774,7 +792,7 @@ button:hover,
     width: 100%;
   }
 
-  #modal-content {
+  #modal-content, #modal-alert {
     width: 95vw;
   }
 
@@ -831,7 +849,7 @@ button:hover,
     width: 75%;
   }
 
-  #sbmt {
+  .form-button {
     height: 40px;
   }
 
@@ -944,6 +962,7 @@ button:hover,
   #change-name,
   .error button {
       animation: none;
+      color: #dd93fa;
     }
   }
   
