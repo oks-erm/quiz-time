@@ -154,11 +154,24 @@ ___
 
 # Features
 ## Existing Features
+
+- **Logo (Home Page)**
+
+![Form](assets/images/readme/logo.png)
+
+The Logo (which is a link to the Home page) is present at all pages throughout the website (apart from [one page where it is not intended for a reason](#This-page-is-a-secret)). From any point of the game, the user can navigate back to the Home page. It has a title to help the users understand the logo is a link.
+
 - **Input Form (Home Page)**
 
-![Form](assets/images/readme/home.png)!
+![Form](assets/images/readme/home.png)
 
-The game starts with a simple home page: it consists of a heading and a form that invites the user to enter a name and start the game. The type of the game is clear from the name, so additional explanations are not needed. It includes the Logo (which is a link to the Home page). From any point on the website, the user can navigate back to the Home page.
+The input form is the main feature of the Home page, it invites the user to enter a name and start the game. The type of the game is clear from the name and the heading, so additional explanations are not needed. 
+
+- **Popup Alert (Home Page)**
+
+![Form](assets/images/readme/popup.png)
+
+The popup alert appears if the user provides invalid input, such as an empty string or a string that consists only of spaces.
 
 - **Difficulty Area**
 
@@ -201,11 +214,21 @@ Error pages inform the user that something went wrong without giving the impress
 
 The loader signals to the user that something is happening.
 
-## Responsive layout
-
-The site is designed to be flexible, fluid, responsive and aesthetically enjoyable on all screen sizes and resolutions starting from 375px (based on [statistics for 2022](https://worship.agency/wp-content/uploads/2022/01/mobile-screen-sizes-2022.png)). To ensure a better visual experience on mobile devices, the neon frame is turned off for the mobile version. To provide a better user experience the landscape orientation for mobile devices was disabled - if the user attempts rotating a device, the game displays a message and offers to rotate the device back to continue the game. This feature was implemented because in the landscape orientation it was not possible to fit all elements of the game into one screen and it included a lot of unnecessary scrolling. 
+- **Orientation alert**
 
 ![Orientation](assets/images/readme/orientation.png)
+
+To provide a better user experience the landscape orientation for mobile devices was disabled - if the user attempts rotating a device, the game displays a message and offers to rotate the device back to continue the game. This feature was implemented because in the landscape orientation it was not possible to fit all elements of the game into one screen and it included a lot of unnecessary scrolling. 
+
+- **Google Spreadsheets API**
+
+To be able to store the data about all the games played, provide real competition and motivate users to return to beat the top score or make sure nobody has beaten their, the Google Sheets API was created. It is very simple, it does not include authorisation, because the data is not sensitive. It stores a score, a name and a date of each game ever completed. The code is available [here](assets/apps_script/code.gs).
+
+- **External APIs**
+
+## Responsive layout
+
+The site is designed to be flexible, fluid, responsive and aesthetically enjoyable on all screen sizes and resolutions starting from 375px (based on [statistics for 2022](https://worship.agency/wp-content/uploads/2022/01/mobile-screen-sizes-2022.png)). To ensure a better visual experience on mobile devices, the neon frame is turned off for the mobile version.
 
 The choice of breakpoints was based on different aspects, such as typical devices' screen sizes and the intention to provide the best possible presentation of the content for all screen sizes. 768px breakpoint is meant to hit the iPad mini; 992px is quite common to signify the transition to laptops, and, content-wise, it proved to be reasonable. 1446px is not a typical choice, but it was preferred based on the content layout. The way I see quiz games, they are supposed to be played on bigger screens, as it is easier to read, possibly with a group of people.
 
