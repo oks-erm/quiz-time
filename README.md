@@ -1,8 +1,7 @@
 # Quiz Time (JavaScript Game)
 ![Website Mock Up](assets/images/readme/mockup.png)
 # Purpose
-This project is a dynamic website - trivia quiz [Quiz Time](https://oks-erm.github.io/quiz-time/). The game provides different levels of difficulty and includes a random fun fact feature between games. The game fetches data from external APIs and provides a variety of questions and facts, thefore it keeps the player amused for multiple game sessions.
-The games stores data about all game, this way providing a real competition between all the players over time. 
+This project is a dynamic website - trivia quiz [Quiz Time](https://oks-erm.github.io/quiz-time/). The game provides different levels of difficulty and includes a random fun fact feature between games. The data is sourced from external APIs, which guarantees a variety of questions and fun facts. Therefore, it keeps the player amused for multiple game sessions. The game stores data about all games ever played, this way providing a real competition between all the players over time.
 
 The core purposes of the website:
 - entertain players with a trivia quiz.
@@ -84,12 +83,12 @@ ___
 
 ## Design
 
-The project's design springs from the easthetics of gaming machines and [God's Own Junkyard](https://www.godsownjunkyard.co.uk/) art space. One of the reasons is that setting a quiz in more obvious pub settings seemed not acceptable for some groups of potential players. A pub setting does not seem very appropriate for younger players, religious and ethnic groups, whose customs disaprove of alcohol and pubs by assosiation. To make it apealing for broader audience a more neutral solution was opted for. 
+The project's design springs from the aesthetics of gaming machines and [God's Own Junkyard](https://www.godsownjunkyard.co.uk/) art space. One of the reasons is that setting a quiz in more obvious pub settings seemed not acceptable for some groups of potential players. A pub setting does not seem very appropriate for younger players and some religious groups. A more neutral solution was chosen to make it appealing to the broader audience. 
 
 ### Colour Scheme
 
 ![Palette](assets/images/readme/palette.png)
-Colour scheme is inspired by neon signs and neon glowing effects are used throughout the website. Shades of magenta and blue are bold and cheerful balanced out with deep black-blue and pastel light blue and grey. 
+Neon signs inspired a colour scheme and neon glowing effects used throughout the website. Shades of magenta and blue are bold and cheerful, balanced out with deep black-blue and pastel light blue and grey. 
 
 #### **Cultured White** 
 #f8f8f8 - is used for neon glow effect and spreading light effect.
@@ -111,11 +110,11 @@ Colour scheme is inspired by neon signs and neon glowing effects are used throug
 
 ### Typography
 
-[Nothing You Could Do](https://fonts.google.com/specimen/Nothing+You+Could+Do?query=nothing+you) is used for headings. It is nonchalant, whilst legible, works well with glowing effect.
+[Nothing You Could Do](https://fonts.google.com/specimen/Nothing+You+Could+Do?query=nothing+you) is used for headings. It is nonchalant, whilst legible, and works well with glowing effect.
 
-[Oxygen](https://fonts.google.com/specimen/Oxygen?query=oxygen) was chosen for body text. It is neutral, soft and easy to read even on the smaller screens.
+[Oxygen](https://fonts.google.com/specimen/Oxygen?query=oxygen) was chosen for the body text. It is neutral, soft and easy to read even on smaller screens.
 
-[God's own junkyard](https://allbestfonts.com/gods-own-junkyard-pro/) is used for the Fun Fact page, as this page is a surprise for the first time user it was decided to use slightly different styling for it. As the page has a plenty of free space, I found it to be a great opportunity to implement the most stereotypical neon font for aesthetic purpose, as it looks good only in bigger sizes.
+[God's own junkyard](https://allbestfonts.com/gods-own-junkyard-pro/) is used for the Fun Fact page, as this page is a surprise for the first-time user, it was decided to use slightly different styling. As the page has plenty of free space, I thought it could be an opportunity to implement the most stereotypical neon font for aesthetic purposes, as it looks good only in bigger sizes.
 
 ### Images
 
@@ -124,30 +123,30 @@ The images in this project were sourced from [ShutterStock](https://www.shutters
 ### Visual Effects
 
 #### Shadows
-As the Home Page consists of the form with two input elements: a text field and a submit button. It was important to add volume and make them more appealing to engage, especially with such a bold and vibrant surroundings with plenty of neon glowing. 
+As the Home Page consists of the form with two input elements, a text field and a submit button. It was important to add volume and make them more appealing to engage, especially with such bold and vibrant surroundings with plenty of neon glowing. 
 
 #### Logo and Page Headings Gradient
-Logo was sourced from a shutterstock image, edited by me to maintain the colour palette. Also it inspired the CSS neon frame. 
+The logo was sourced from a Shutterstock image, edited by me to maintain the colour palette. Also, it inspired the CSS neon frame. 
 
 #### Neon frame
-Initially the neon frame was a part of the background image, but it turned out to be a poor solution considering the required responsiveness. So the adaptive neon frame was implemented. Neon glowing effect was immitated by multiple shadows in CSS and the frame was established with a grid.  
+Initially, the neon frame was a part of the background image, but it turned out to be a poor solution considering the required responsiveness. So the adaptive neon frame was implemented. The neon glowing effect was imitated by multiple box-shadows in CSS and the frame was set up with a grid.  
 
 #### Buttons and Hover Effects
 There are two types of buttons: game buttons and navigation buttons. 
-Game buttons offer hover over effect: it changes inset shadow colour to invite the user to engage and demonstrate that the elements are interactive.
-Navigation buttons have subtle glowing animation at all times, as well as changing colour when being hoved over with the mouse.
+Game buttons offer a hover-over effect: it changes the inset shadow colour to invite the user to engage and demonstrate that the elements are interactive.
+Navigation buttons have subtle glowing animation at all times, as well as changing colour when being hovered over with the mouse.
 
 #### Animated glowing
-Animated glowing pulsating effect is used for headings and navigation buttons to create the neon aesthetics. The glowing is very subtle, so it does not compromise legibility. Keeping in mind that it might cause accessibility issues, the website includes a media query for people who prefer reduced motion. 
+An animated glowing pulsating effect is used for headings and navigation buttons to create neon aesthetics. The glowing is very subtle, so it does not compromise legibility. Keeping in mind that it might cause accessibility issues, the website includes a media query for people who prefer reduced motion. 
 
 #### Loader
-All pages are fitted with loaders(magenta dots on black background), because at many points the website interracts with external APIs and awaits for the data, which might take some time, it was decided to implement a loader to inform the user that something is in progress and the website is not broken. Moreover the slow fadeout effect provides a smooth aesthetical transition between pages even if we do not happen to see the loader running. 
+All pages are fitted with loaders(magenta dots on black background) because at many points the website interacts with external APIs and awaits the data, which might take some time, it was decided to implement a loader to inform the user that something is in progress and the website is not broken. Moreover, the slow fadeout effect provides a smooth aesthetical transition between pages even if we do not happen to see the loader running. 
 
 #### Confetti burst
-When the highscores modal appears it is celebrated with a confetti burst created with [Confetti](https://www.npmjs.com/package/canvas-confetti) JS library. 
+When the high scores modal appears, it is celebrated with a confetti burst created with [Confetti](https://www.npmjs.com/package/canvas-confetti) JS library. 
 
 #### Increment Score animation
-When the score increments it is accompanied with a little burst of particles around the changing number. The effect is created with [Mo JS](https://mojs.github.io/) JS library.
+When the score increments, it is accompanied by a little burst of particles around the changing number. The effect is created with [Mo JS](https://mojs.github.io/) JS library.
 
 #### Cursor
 For all elements that can be clicked a custom cursor appears when being hovered over with the mouse.
@@ -159,19 +158,19 @@ ___
 
 ![Form](assets/images/readme/home.png)!
 
-The game starts with a simple home page, it consists of a heading and a form that invites the user to enter a name and start the game. A type of the game is clear from the name, so additional explanations are not needed. It includes the Logo (which is a link to the Home page). From any point of the website the user can navigate back to the Home page.
+The game starts with a simple home page: it consists of a heading and a form that invites the user to enter a name and start the game. The type of the game is clear from the name, so additional explanations are not needed. It includes the Logo (which is a link to the Home page). From any point on the website, the user can navigate back to the Home page.
 
 - **Difficulty Area**
 
 ![Difficulty](assets/images/readme/difficulty.png)
 
-This section is the first thing the user sees starting the game, it allows to choose difficulty level of the quiz. It maintaines the same layout and design as the Home Page.
+This section is the first thing the user sees starting the game, it allows to choose the difficulty level of the quiz. It maintains the same layout and design as the Home Page.
 
 - **Question Area**
 
 ![Question](assets/images/readme/question.png)
 
-The question area is the main area of the game. On the top there are the Current Score (which increments according to the difficulty) and the Top Score (that is fetched from the API that stores results of all the games ever played by all users). It displays 20 questions from the API according to the chosen difficulty. API includes thousands of questions, this way repetitions are very rear and the game is gripping and users might be tempted to play multiple games and return again. The user chooses the answer and receives a clear colour coded response if the answer is correct. The navigation is clear because the game is linear.
+The question area is the main area of the game. On the top, there are the Current Score (which increments according to the difficulty) and the Top Score (which is fetched from the API that stores results of all the games ever played by all users). It displays 20 questions from the API according to the chosen difficulty. API includes thousands of questions, this way, repetitions are rather rare, so the game is gripping and users might be tempted to play multiple games and return. The user chooses the answer and receives a clear colour-coded response if the answer is correct. The navigation is clear and straightforward because the game is linear.
 
 ![Answer](assets/images/readme/answer.png)
 
@@ -179,22 +178,22 @@ The question area is the main area of the game. On the top there are the Current
 
 ![Highscores](assets/images/readme/highscores.png)
 
-In the end of the game the highscores modal window appears. It displays the player's current result and top 8 results for all the history of the game. The results are stored at Google Spreadsheets and the app written by me processes requests: allows to access and write data. At the bottom of the window there is a button "Play again".
+At the end of the game, the high scores modal window appears. It displays the player's current result and top 8 results for all the history of the game. The results are stored in Google Spreadsheets and the app written by me processes requests - it allows the game to access and write the data. At the bottom of the window, there is a button "Play again".
 
 - **Funfact Page**
 
 ![Funfact](assets/images/readme/funfact.png)
 
-This page is a secret page which appears after the game when the user clicks "Play again". It has a different layout and does not have the logo on it to make it standout from the main game flow and at the same time maintain the atmosphere of secrecy, somewhat like a secret mode with a limited access. The absense of the logo will not compromise the website navigation, because one of the buttons below the fact takes the user to the home page anyway.
+This page is a secret page which appears after the game when the user clicks "Play again". It has a different layout and does not have the logo on it to make it stand out from the main game flow and at the same time maintain the atmosphere of secrecy, somewhat like a secret mode with limited access. The absence of the logo will not compromise the website navigation, because one of the buttons below the fact takes the user to the home page anyway.
 
-It is intended to be a reward after the game and there is no other way to get to this page. It displays a random fun fact from the API, facts are brief and interesting, I believe everyone who loves quizes would appreciate this little treat. This page offers the user possible scenarious: play again (navigates to the difficulty section) or change name (if the user decides to contribute to the fun names collection) and play again (navigates to the home page).
+It is intended to be a reward after the game and there is no other way to get to this page. It displays a random fun fact from the API, facts are brief and interesting, I believe everyone who loves quizzes would appreciate this little treat. This page offers the user possible scenarios: play again (navigates to the difficulty section) or change the name (if the user decides to contribute to the fun names collection) and play again (navigates to the home page).
 
 - **Error Pages**
 
 ![Error500](assets/images/readme/500.png)
 ![Error404](assets/images/readme/404.png)
 
-Error pages inform the user that something went wrong without giving the impession that the user has left the website, they offer alternative scenarious keeping the user on the website.
+Error pages inform the user that something went wrong without giving the impression that the user has left the website, they offer alternative scenarios keeping the user on the website.
 
 - **Loader**
 
@@ -204,13 +203,13 @@ The loader signals to the user that something is happening.
 
 ## Responsive layout
 
-The site is designed to be flexible, fluid, responsive and aesthetically enjoyable on all screen sizes and resolutions starting from 375px (based on [statistics for 2022](https://worship.agency/wp-content/uploads/2022/01/mobile-screen-sizes-2022.png)). To ensure better visual experience on mobile devices, the neon frame is turned off for the mobile version. To provide better user experince the landscape orientation for mobile devices was disabled - if the user attempts rotating a device, the game displays a message and offers to rotate the device back to continue the game. This feature was implemented because in the landscape orientation it was not possible to fit all elements of the game into one screen and it included a lot of unnecessary scrolling. 
+The site is designed to be flexible, fluid, responsive and aesthetically enjoyable on all screen sizes and resolutions starting from 375px (based on [statistics for 2022](https://worship.agency/wp-content/uploads/2022/01/mobile-screen-sizes-2022.png)). To ensure a better visual experience on mobile devices, the neon frame is turned off for the mobile version. To provide a better user experience the landscape orientation for mobile devices was disabled - if the user attempts rotating a device, the game displays a message and offers to rotate the device back to continue the game. This feature was implemented because in the landscape orientation it was not possible to fit all elements of the game into one screen and it included a lot of unnecessary scrolling. 
 
 ![Orientation](assets/images/readme/orientation.png)
 
 The choice of breakpoints was based on different aspects, such as typical devices' screen sizes and the intention to provide the best possible presentation of the content for all screen sizes. 768px breakpoint is meant to hit the iPad mini; 992px is quite common to signify the transition to laptops, and, content-wise, it proved to be reasonable. 1446px is not a typical choice, but it was preferred based on the content layout. The way I see quiz games, they are supposed to be played on bigger screens, as it is easier to read, possibly with a group of people.
 
-The main game frame is based Grid, with Flex used for the content inside the grid, what allows the website to expand and shrink responsively to a device screen size providing each page's design integrity. Elements must maintain their respective position (or change if intended for better user experience), they do not overlap or misalign, and the content does not overflow. 
+The main game frame is based Grid, with Flex used for the content inside the grid, which allows the website to expand and shrink responsively to a device screen size providing each page's design integrity. Elements must maintain their respective position (or change if intended for better user experience), they do not overlap or misalign, and the content does not overflow. 
 
 ## Feature Considerations
 
@@ -224,7 +223,6 @@ It could be interesting to keep track of statistics for each question, such as h
 
 ### Easter eggs
 I personally enjoy unexpected and fun featured so I would like to come up with something that would be entertaining without breaking the flow of the game.
-
 ___
 
 # Technologies
