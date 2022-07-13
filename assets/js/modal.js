@@ -6,13 +6,13 @@ const playAgain = document.getElementById('play-again');
 const tbody = document.getElementsByTagName('tbody')[0];
 
 // Open modal
-export function openModal() {
+export function openModal(modal) {
     // show modal
     modal.classList.add('show');
 }
 
-export function closeModal() {
-    // show modal
+export function closeModal(modal) {
+    // hide modal
     modal.classList.remove('show');
 }
 

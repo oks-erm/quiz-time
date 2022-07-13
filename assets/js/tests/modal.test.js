@@ -14,24 +14,40 @@ vi.stubGlobal('document', document);
 document.body.innerHTML = '';
 document.write(htmlDocumentContent);
 
-global.alert = vi.fn();
 global.location.assign = vi.fn();
 
-import { openModal, buildTable } from '../modal.js';
-vi.mock('../animation');
-vi.mock('../scores');
+import { openModal, buildTable, highScores, closeModal } from '../modal.js';
+import { confettiBurst } from '../animation.js';
+import { sortScores } from '../scores.js';
+
+confettiBurst = vi.fn(() => {});
+sortScores = vi.fn(() => {});
+vi.mock('../animation', () => vi.fn());
+vi.mock('../scores', () => vi.fn());
 
 describe('openModal()', () => {
-    const modal = document.getElementById('modal-wrapper');
-    const playAgain = document.getElementById('play-again');
+    it('should add class "show" to modal', () => {
+        const testModal = document.getElementById('modal-wrapper');
+        openModal(testModal);
+    
+        expect(testModal.classList.contains('show')).toBe(true);
+    })
+})
 
+describe('closeModal()', () => {
+    it('should add class "show" to modal', () => {
+        const testModal = document.getElementById('modal-wrapper');
+        openModal(testModal);
+        closeModal(testModal);
+        expect(testModal.classList.contains('show')).toBe(false);
+    })
+})
+
+describe('highScores()', () => {
+    const playAgain = document.getElementById('play-again');
     const testArray = [];
 
-    openModal(testArray);
-
-    it('should add class "show" to modal', () => {
-        expect(modal.classList.contains('show')).toBe(true);
-    })
+    highScores(testArray);
 
     it('should set data-listener attribute on the Play Again button to true', () => {
         expect(playAgain.getAttribute('data-listener')).toBe('true');
@@ -43,6 +59,14 @@ describe('openModal()', () => {
 
         expect(global.location.assign).toBeCalled();
         expect(global.location.assign).toBeCalledWith('funfact.html');
+    })
+
+    it('should call confettiBurst()', () => {
+        expect(confettiBurst).toBeCalled();
+    })
+
+    it('should call sortScores()', () => {
+        expect(sortScores).toBeCalled();
     })
 })
 

@@ -402,6 +402,7 @@ describe('getQuestion()', () => {
     const game = document.getElementById('game-area');
     const yourScore = document.getElementById('your-score');
     const next = document.getElementById('next');
+    const modal = document.getElementById('modal-wrapper');
 
     it('should display question count', () => {
         getQuestion();

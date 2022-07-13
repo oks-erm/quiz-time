@@ -28,6 +28,7 @@ const questionCount = document.getElementById('question-count');
 const question = document.getElementById('question-text');
 const optionButtons = document.getElementsByClassName('answer');
 const next = document.getElementById('next');
+const modal = document.getElementById('modal-wrapper');
 
 // Scores
 const yourScore = document.getElementById('your-score');
@@ -111,7 +112,7 @@ export function getQuestion() {
         handleScores(currentScore, userName, utc);
         // hide the game area, open the modal with highscores
         game.classList.add('hide');
-        openModal();
+        openModal(modal);
         highScores(scoresData);
         yourScore.innerText = `Well done, ${userName}! You've scored` + ' ' + currentScore + '.';
     }

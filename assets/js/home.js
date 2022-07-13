@@ -8,9 +8,9 @@ const close = document.getElementById('close');
 export function validateInput(input) {
     // Make sure there is input and it's not spaces only
     if (!input || input.trim().length === 0) {
-        openModal();
+        openModal(modal);
         if (close.getAttribute('data-listener') !== "true") {
-            close.addEventListener('click', closeModal);
+            close.addEventListener('click', () => closeModal(modal));
             close.setAttribute('data-listener', 'true');
         }
     } else {

@@ -7,8 +7,6 @@ import { Window } from 'happy-dom';
 const htmlDocPath = path.join(process.cwd(), 'index.html');
 const htmlDocumentContent = fs.readFileSync(htmlDocPath).toString();
 
-Window.prototype.alert = vi.fn();
-
 const window = new Window();
 const document = window.document;
 vi.stubGlobal('document', document);
@@ -22,6 +20,12 @@ global.$ = require('jquery')(window);
 global.$ = require('jquery');
 
 import { formHandler, validateInput } from '../home.js';
+import { openModal, closeModal } from '../modal.js';
+
+
+openModal = vi.fn(() => {});
+closeModal = vi.fn(() => {});
+vi.mock('../modal', () => vi.fn());
 
 describe('validateInput()', () => {
     beforeEach(() => {
@@ -29,18 +33,23 @@ describe('validateInput()', () => {
         document.write(htmlDocumentContent);
     })
 
+    const close = document.getElementById('close');
+
     it('should display an alert box if input field is empty', () => {
         const testInput = '';
 
         validateInput(testInput);
-        expect(global.alert).toBeCalled();
+
+        expect(openModal).toBeCalled();
+        expect(close.getAttribute('data-listener')).toBe('true');
     })
 
     it('should display an alert box if spaces are provided as a value', () => {
         const testInput = '     ';
         validateInput(testInput);
 
-        expect(global.alert).toBeCalled();
+        expect(openModal).toBeCalled();
+        expect(close.getAttribute('data-listener')).toBe('true');
     });
 
     it('should store the valid input value to a session storage', () => {
@@ -52,6 +61,7 @@ describe('validateInput()', () => {
 
     it('should navigate to another page', () => {
         const testInput = 'Test';
+
         validateInput(testInput);
 
         expect(global.location.assign).toBeCalled();
