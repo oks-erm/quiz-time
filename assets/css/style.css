@@ -792,8 +792,12 @@ button:hover,
     width: 100%;
   }
 
-  #modal-content, #modal-alert {
+  #modal-content {
     width: 95vw;
+  }
+
+  #modal-alert {
+    width: 60vw;
   }
 
   h1 {
@@ -851,6 +855,10 @@ button:hover,
 
   .form-button {
     height: 40px;
+  }
+
+  #modal-alert {
+    width: 85vw;
   }
 
   /* Neon frame */
