@@ -222,9 +222,15 @@ To provide a better user experience the landscape orientation for mobile devices
 
 - **Google Spreadsheets API**
 
-To be able to store the data about all the games played, provide real competition and motivate users to return to beat the top score or make sure nobody has beaten their, the Google Sheets API was created. It is very simple, it does not include authorisation, because the data is not sensitive. It stores a score, a name and a date of each game ever completed. The code is available [here](assets/apps_script/code.gs).
+To be able to store the data about all the games played, provide real competition and motivate users to return to beat the top score or make sure nobody has beaten their, the Google Sheets API was created. It is very simple, it does not include authorisation, because the data is not sensitive. It stores a score, a name and a date of each game ever completed. The code is available [here](assets/apps_script/code.gs). Interaction with the API is performed via old school jQuery AJAX requests.
 
 - **External APIs**
+
+To provide a variety of questions for the quiz and amusing fun facts two external API's are used:
+- [Open Trivia DataBase](https://opentdb.com/) for the trivia questions.
+- [Random Fact Database](https://uselessfacts.jsph.pl/) for the facts for the Fun Fact page.
+
+To interract with external APIs the fetch() method is used. I intentionally used two different types of API calls out of learning curiosity. I wanted to explore different ways to conduct API calls. I researched the difference between them and having read quite a lot I could not find a definite answer. [One of the articles](https://blog.openreplay.com/ajax-battle-xmlhttprequest-vs-the-fetch-api) suggested that "Both alternatives are interesting, and it’s worth knowing them in detail!". I decided to follow this advice and look into both: the most basic and oldschool and the most modern. 
 
 ## Responsive layout
 
