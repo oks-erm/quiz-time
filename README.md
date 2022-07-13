@@ -197,7 +197,7 @@ At the end of the game, the high scores modal window appears. It displays the pl
 
 ![Funfact](assets/images/readme/funfact.png)
 
-This page is a secret page which appears after the game when the user clicks "Play again". It has a different layout and does not have the logo on it to make it stand out from the main game flow and at the same time maintain the atmosphere of secrecy, somewhat like a secret mode with limited access. The absence of the logo will not compromise the website navigation, because one of the buttons below the fact takes the user to the home page anyway.
+This page is a secret page which appears after the game when the user clicks "Play again". It has a different layout and does not have the logo on it to make it stand out of the main game flow and at the same time create the atmosphere of secrecy, somewhat a special mode with limited access impression. The absence of the logo will not compromise the website navigation, because one of the buttons below the fact takes the user to the home page anyway.
 
 It is intended to be a reward after the game and there is no other way to get to this page. It displays a random fun fact from the API, facts are brief and interesting, I believe everyone who loves quizzes would appreciate this little treat. This page offers the user possible scenarios: play again (navigates to the difficulty section) or change the name (if the user decides to contribute to the fun names collection) and play again (navigates to the home page).
 
@@ -242,7 +242,7 @@ The main game frame is based Grid, with Flex used for the content inside the gri
 
 ## Feature Considerations
 
-### Miltiplayer
+### Multiplayer
 
 ### Select the ammount of questions
 Currently every game consists of 20 questions.
@@ -250,8 +250,6 @@ Currently every game consists of 20 questions.
 ### Statistics of correct answers for each question
 It could be interesting to keep track of statistics for each question, such as how many people answered it and the percentage of correct answers.
 
-### Easter eggs
-I personally enjoy unexpected and fun featured so I would like to come up with something that would be entertaining without breaking the flow of the game.
 ___
 
 # Technologies
@@ -491,7 +489,31 @@ The website was tested with [Screen Reader for Goggle Chrome](https://chrome.goo
 
 ### Colourblind Accessibility 
 
-All the pages were tested with [color-blindnes.com](https://www.color-blindness.com/coblis-color-blindness-simulator/). I first attempted testing it with [Colorfilter](https://www.toptal.com/designers/colorfilter/) but I came across multiple complaints about it's ability to process css, the same is stated on the home page. It would display bugs that I was not able to replicate in any other environment. I searched similar cases and I found reports of the similar results. This way I decided to test screenshots and run them through all the modex of [color-blindnes.com](https://www.color-blindness.com/coblis-color-blindness-simulator/). No issues were detected.
+All the pages were run through all the modes of [color-blindnes.com](https://www.color-blindness.com/coblis-color-blindness-simulator/). No issues were detected.
+
+**Home**
+
+![Home](assets/images/readme/testing/accessibility/coblin-home.png)
+
+**Difficulty**
+
+![Difficulty](assets/images/readme/testing/accessibility/coblin-dif.png)
+
+**Question**
+
+![Questions](assets/images/readme/testing/accessibility/coblin-question.png)
+
+**High Scores**
+
+![HS](assets/images/readme/testing/accessibility/coblin-hs.png)
+
+**Fun Fact**
+
+![Fun Fact](assets/images/readme/testing/accessibility/coblin-funfact.png)
+
+**Error**
+
+![Error](assets/images/readme/testing/accessibility/coblin404.png)
 
 ___
 
