@@ -11,11 +11,13 @@ export function openModal(modal) {
     modal.classList.add('show');
 }
 
+// Close modal
 export function closeModal(modal) {
     // hide modal
     modal.classList.remove('show');
 }
 
+// High scores modal content
 export function highScores(scoresData) {
     buildTable(scoresData);
     //set event listener to the Play again button

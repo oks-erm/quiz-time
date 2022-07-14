@@ -38,7 +38,7 @@ const score = document.getElementById('score');
 // Add event listeners to difficulty buttons and change the attribute
 export function setDifficulty() {
     for (let button of document.getElementsByClassName('difficulty')) {
-        if(button.getAttribute('data-listener') !== 'true') {
+        if (button.getAttribute('data-listener') !== 'true') {
             button.addEventListener('click', eventHandler);
             button.setAttribute('data-listener', 'true');
         }
@@ -81,7 +81,7 @@ export async function callAPI(apiAddress) {
         difficultyToGame();
         return data;
     } else {
-    // navigate to the error page if response is not successful 
+        // navigate to the error page if response is not successful 
         window.location.assign('500.html');
     }
 }
@@ -98,16 +98,16 @@ export function shuffle(array) {
 // Output a question
 export function getQuestion() {
     currentQuestion = data.results[n];
-    if(n <=19) {
-       // set the question and answers
-       question.innerHTML = currentQuestion.question;
-       prepareAnswers(currentQuestion);
-       setAnswers(answers);
-       // display a question count and increment it
-       questionCount.innerText = `${n+1}` + '/20';
-       n++;
-       // hide next button
-       next.classList.add('hide');
+    if (n <= 19) {
+        // set the question and answers
+        question.innerHTML = currentQuestion.question;
+        prepareAnswers(currentQuestion);
+        setAnswers(answers);
+        // display a question count and increment it
+        questionCount.innerText = `${n+1}` + '/20';
+        n++;
+        // hide next button
+        next.classList.add('hide');
     } else {
         handleScores(currentScore, userName, utc);
         // hide the game area, open the modal with highscores
@@ -206,5 +206,5 @@ window.addEventListener('resize', () => {
     // set the value again based on the new viewport size
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
-  });
+});
 // (c) https://css-tricks.com/the-trick-to-viewport-units-on-mobile/

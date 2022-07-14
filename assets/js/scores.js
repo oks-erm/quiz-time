@@ -25,6 +25,7 @@ export function sortScores(array) {
     });
 }
 
+// Display scores in the game area
 export async function setScores() {
     let scores = await callScores();
     // write received data to scoresData and assign Top Score
@@ -36,6 +37,7 @@ export async function setScores() {
     }
 }
 
+// Post the result of the game to the API
 export function handleScores(currentScore, userName, utc) {
     // create current result data to write it to scores API
     currentResult = {
