@@ -113,12 +113,26 @@ ___
 ___
 
 ## Wireframes
-.
-.
-.
-.
-.
 
+- **Home Page**
+
+![Wire-home](assets/images/readme/wireframes/wire-home.webp)
+
+- **Difficulty Area**
+
+![Wire-difficulty](assets/images/readme/wireframes/wire-difficulty.webp)
+
+- **Question Area**
+
+![Wire-question](assets/images/readme/wireframes/wire-question.webp)
+
+- **High Scores Area**
+
+![Wire-scores](assets/images/readme/wireframes/wire-scores.webp)
+
+- **Fun Fact Page**
+
+![Wire-funfact](assets/images/readme/wireframes/wire-fun.webp)
 ___
 
 ## Design
