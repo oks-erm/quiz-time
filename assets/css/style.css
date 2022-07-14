@@ -554,7 +554,7 @@ table {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-image: linear-gradient(rgb(26 45 121), rgb(7 7 7));
   opacity: 0;
   pointer-events: none;
   display: flex;
@@ -568,7 +568,7 @@ table {
 
 }
 
-#logo-orientation {
+.logo-orientation {
   background: url(../images/logo-big.webp) no-repeat center center;
   background-size: contain;
   height: 100px;
@@ -606,7 +606,8 @@ table {
   display: block;
 }
 
-.error #logo-orientation {
+.error .logo-orientation {
+  margin-top: 0;
   opacity: 0.5;
 }
 
@@ -764,7 +765,7 @@ button:hover,
 
 /* ----- Tablets */
 @media only screen and (max-width: 991px) {
-  #game-frame {
+  #game-frame, #funfact, .error, #orientation {
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
   }
@@ -926,9 +927,6 @@ button:hover,
   }
 
   /* Fun Fact page */
-  #funfact {
-    height: calc(var(--vh, 1vh) * 100);
-  }
 
   #funfact-container {
     width: 85%;
@@ -941,9 +939,6 @@ button:hover,
   }
 
   /* Error pages */
-  .error {
-    height: calc(var(--vh, 1vh) * 100);
-  }
 
   .error button {
     margin: 0.5em 0.5em;
@@ -957,8 +952,8 @@ button:hover,
     pointer-events: auto;
   }
 
-  #funfact {
-    display: block;
+  #funfact, #game-frame {
+    opacity: 0
   }
 }
 
