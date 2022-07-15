@@ -414,7 +414,7 @@ Certain minor differences were detected, but no issues affected the overall perf
 ### Bugs detected:
 - For one of the Android devices, the website was flickering with a whole screen instead of CSS animation. I was not able to approach it because I was not able to replicate it on my devices.
 
-- Sometimes when the orientation alert is displayed, the page, even though it's 100vh, would stick out from under the orientation alert. The problem was solved by setting max-height to 100vh and overflow:hidden. 
+- Sometimes when the orientation alert is displayed, the page, even though it's 100vh, would stick out from under the orientation alert. The problem was solved by setting max-height to 100vh and overflow:hidden for html in the respective media query.
 
 ## Unit testing
 
