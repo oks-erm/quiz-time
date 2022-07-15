@@ -952,7 +952,7 @@ button:hover,
     pointer-events: auto;
   }
 
-  #modal-content, #funfact-container, #question-area {
+  html {
     max-height: 100vh;
     overflow: hidden;
   }
