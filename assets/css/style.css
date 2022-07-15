@@ -952,8 +952,9 @@ button:hover,
     pointer-events: auto;
   }
 
-  #funfact, #game-frame {
-    opacity: 0
+  #modal-content, #funfact-container, #question-area {
+    max-height: 100vh;
+    overflow: hidden;
   }
 }
 
